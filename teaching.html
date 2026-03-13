@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching | Keith E. Whittington</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #fdfdfc; --text: #1a1a1a; --accent: #00356b; --muted: #666; --border: #e5e5e0; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        h1, h2, h3 { font-family: 'EB Garamond', serif; }
+        
+        header { padding: 2rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+        nav a { margin-left: 2rem; text-decoration: none; color: var(--muted); font-size: 0.9rem; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 5%; }
+        .page-title { font-size: 3rem; margin-bottom: 1rem; }
+        .intro-text { font-size: 1.1rem; color: var(--muted); margin-bottom: 4rem; border-left: 3px solid var(--accent); padding-left: 20px; }
+
+        .course-section { margin-bottom: 5rem; }
+        .institution-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 1rem; display: block; }
+        
+        /* Individual Course Styling */
+        .course-card { background: white; border: 1px solid var(--border); padding: 2rem; margin-bottom: 1.5rem; transition: 0.2s; }
+        .course-card:hover { border-color: var(--accent); }
+        .course-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+        .course-title { margin: 0; font-size: 1.6rem; }
+        .course-meta { font-size: 0.9rem; color: var(--muted); }
+        
+        .syllabus-btn { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--text); text-decoration: none; color: var(--text); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.2s; }
+        .syllabus-btn:hover { background: var(--text); color: white; }
+
+        .archive-list { list-style: none; padding: 0; }
+        .archive-item { padding: 1rem 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .archive-item span { color: var(--muted); font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .course-header { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">KEITH E. WHITTINGTON</a>
+    <nav>
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="commentary.html">Commentary</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="page-title">Teaching</h1>
+    <p class="intro-text">Course materials and syllabi for classes on constitutional law, American political thought, and judicial politics.</p>
+
+    <section class="course-section">
+        <span class="institution-label">Yale Law School</span>
+        
+        <div class="course-card">
+            <div class="course-header">
+                <div>
+                    <h3 class="course-title">American Constitutional Law</h3>
+                    <div class="course-meta">Advanced Seminar • Spring 2026</div>
+                </div>
+                <a href="Syllabus_AmConLaw_2026.pdf" target="_blank" class="syllabus-btn">View Syllabus (PDF)</a>
+            </div>
+            <p>An examination of the history and development of American constitutionalism, with a focus on federalism, separation of powers, and the role of the judiciary.</p>
+        </div>
+    </section>
+
+    <section class="course-section">
+        <span class="institution-label">Princeton University (Selected Archive)</span>
+        
+        <ul class="archive-list">
+            <li class="archive-item">
+                <div>
+                    <strong>Constitutional Interpretation</strong>
+                    <br><span>POL 315</span>
+                </div>
+                <a href="#" class="syllabus-btn">Syllabus</a>
+            </li>
+            <li class="archive-item">
+                <div>
+                    <strong>American Political Thought</strong>
+                    <br><span>POL 316</span>
+                </div>
+                <a href="#" class="syllabus-btn">Syllabus</a>
+            </li>
+            <li class="archive-item">
+                <div>
+                    <strong>The Judicial Process</strong>
+                    <br><span>POL 320</span>
+                </div>
+                <a href="#" class="syllabus-btn">Syllabus</a>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer class="container" style="border-top: 1px solid var(--border); margin-top: 4rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
+    &copy; 2026 Keith E. Whittington.
+</footer>
+
+</body>
+</html>
