@@ -76,18 +76,49 @@
         .btn:hover { background: var(--accent); }
 
         /* Quick Links / Bento Grid */
-        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .card { 
-            padding: 2rem; 
-            border: 1px solid var(--border); 
-            transition: 0.3s;
-            text-decoration: none;
-            color: inherit;
-        }
-        .card:hover { border-color: var(--accent); transform: translateY(-3px); }
-        .card h3 { margin-top: 0; font-size: 1.5rem; }
-        .card p { font-size: 0.95rem; color: var(--muted); margin-bottom: 0; }
+       /* Updated Grid for Visual Balance */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem; 
+    align-items: stretch; 
+}
 
+.card { 
+    padding: 2.5rem 2rem; 
+    border: 1px solid var(--border); 
+    transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 { 
+    margin-top: 0; 
+    font-size: 1.35rem; 
+    line-height: 1.25;
+    color: var(--text);
+    /* This ensures headers always occupy the same vertical space */
+    min-height: 3.5rem; 
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center; /* Centers shorter titles vertically within the space */
+}
+
+.card p { 
+    font-size: 0.95rem; 
+    color: var(--muted); 
+    margin-bottom: 0;
+    flex-grow: 1; /* Pushes the description to fill the space */
+}
+
+/* Hover effect to signal interactivity */
+.card:hover { 
+    border-color: var(--accent); 
+    background-color: #f9f9f7;
+    transform: translateY(-3px); 
+}
         @media (max-width: 768px) {
             .hero { grid-template-columns: 1fr; text-align: center; }
             .hero-text p { margin: 0 auto 2rem; }
@@ -123,20 +154,20 @@
         </div>
     </section>
 
-    <section class="grid">
-        <a href="#research" class="card">
-            <h3>Constitutional Law, Politics, History, and Theory</h3>
-            <p>In-depth research on originalism, judicial review, and the development of American constitutionalism.</p>
-        </a>
-        <a href="#afa" class="card">
-            <h3>Academic Freedom</h3>
-            <p>Advocating for the protection of free inquiry and expression within the university system.</p>
-        </a>
-        <a href="#writing" class="card">
-            <h3>Public Commentary</h3>
-            <p>Essays and analysis for The Dispatch, Volokh Conspiracy, and other national outlets.</p>
-        </a>
-    </section>
+  <section class="grid">
+    <a href="#research" class="card">
+        <h3>American Constitutional History and Law</h3>
+        <p>In-depth research on originalism, judicial review, and the development of the American constitutional order.</p>
+    </a>
+    <a href="#afa" class="card">
+        <h3>Academic Freedom and Free Inquiry</h3>
+        <p>Advocating for the protection of free expression and the search for truth within the university system.</p>
+    </a>
+    <a href="#writing" class="card">
+        <h3>Public Commentary and Analysis</h3>
+        <p>Legal and political analysis for The Dispatch, The Volokh Conspiracy, and other national outlets.</p>
+    </a>
+</section>
 </main>
 
 <footer class="container" style="border-top: 1px solid var(--border); margin-top: 4rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
