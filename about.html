@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Keith E. Whittington</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #fdfdfc; --text: #1a1a1a; --accent: #00356b; --muted: #666; --border: #e5e5e0; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        h1, h2, h3 { font-family: 'EB Garamond', serif; }
+        
+        header { padding: 2rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+        nav a { margin-left: 2rem; text-decoration: none; color: var(--muted); font-size: 0.9rem; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 5%; }
+        
+        /* Layout for Bio */
+        .about-grid { display: grid; grid-template-columns: 1fr 280px; gap: 4rem; }
+        
+        .bio-content h1 { font-size: 3rem; margin-top: 0; margin-bottom: 2rem; }
+        .bio-text { font-size: 1.1rem; color: #333; }
+        
+        /* Sidebar Styles */
+        .sidebar { position: sticky; top: 120px; }
+        .headshot-placeholder { background: #eee; width: 100%; aspect-ratio: 1/1; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; color: #999; border: 1px solid var(--border); }
+        
+        .cv-block { background: white; border: 1px solid var(--border); padding: 1.5rem; text-align: center; }
+        .btn-cv { display: block; background: var(--text); color: white; text-decoration: none; padding: 0.8rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 1rem; transition: 0.2s; }
+        .btn-cv:hover { background: var(--accent); }
+        
+        .contact-info { margin-top: 2rem; font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+        .contact-info p { margin: 0.5rem 0; color: var(--muted); }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .sidebar { order: -1; position: static; margin-bottom: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">KEITH E. WHITTINGTON</a>
+    <nav>
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="commentary.html">Commentary</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="container">
+    <div class="about-grid">
+        <article class="bio-content">
+            <h1>About</h1>
+            <div class="bio-text">
+                <p><strong>Keith E. Whittington</strong> is the David Boies Professor of Law at Yale Law School. He previously served as the William Nelson Cromwell Professor of Politics at Princeton University.</p>
+                
+                <p>His research spans American constitutional history, constitutional theory, and judicial politics. He is the author of several award-winning books, including <em>Speak Freely: Why Universities Must Defend Free Speech</em> and <em>Repugnant Laws: Judicial Review of Acts of Congress from the Founding to the Present</em>.</p>
+                
+                <p>In addition to his academic work, he serves as the Chair of the Academic Committee of the Academic Freedom Alliance and is a frequent contributor to public discourse on legal and constitutional matters.</p>
+                
+                </div>
+        </article>
+
+        <aside class="sidebar">
+            <div class="headshot-placeholder">[Headshot Image]</div>
+            
+            <div class="cv-block">
+                <span style="font-size: 0.7rem; text-transform: uppercase; color: var(--muted);">Curriculum Vitae</span>
+                <a href="CV_Whittington.pdf" target="_blank" class="btn-cv">Download CV (PDF)</a>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>Yale Law School</strong></p>
+                <p>127 Wall Street</p>
+                <p>New Haven, CT 06511</p>
+                <p style="margin-top: 1rem;"><a href="mailto:keith.whittington@yale.edu" style="color: var(--accent); text-decoration: none;">Email Contact</a></p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer class="container" style="border-top: 1px solid var(--border); margin-top: 4rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
+    &copy; 2026 Keith E. Whittington.
+</footer>
+
+</body>
+</html>
