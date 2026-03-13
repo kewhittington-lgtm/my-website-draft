@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keith E. Whittington | Scholar & Author</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdfdfc;
+            --text: #1a1a1a;
+            --accent: #00356b; /* Yale Blue */
+            --muted: #666;
+            --border: #e5e5e0;
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .serif { font-family: 'EB Garamond', serif; }
+
+        header {
+            padding: 2rem 5%;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+
+        nav a { margin-left: 2rem; text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 400; }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 5%; }
+
+        /* Hero Section */
+        .hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
+        .hero-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
+        .hero-text p { font-size: 1.25rem; color: var(--muted); margin-bottom: 2rem; max-width: 500px; }
+
+        /* Featured Book Card */
+        .featured-book {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border-radius: 4px;
+        }
+        .book-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 1rem; display: block; }
+        .featured-book img { width: 180px; height: auto; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); margin: 1rem 0; }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--text);
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+            transition: 0.2s;
+        }
+        .btn:hover { background: var(--accent); }
+
+        /* Quick Links / Bento Grid */
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .card { 
+            padding: 2rem; 
+            border: 1px solid var(--border); 
+            transition: 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+        .card h3 { margin-top: 0; font-size: 1.5rem; }
+        .card p { font-size: 0.95rem; color: var(--muted); margin-bottom: 0; }
+
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero-text p { margin: 0 auto 2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">KEITH E. WHITTINGTON</a>
+    <nav>
+        <a href="#books">Books</a>
+        <a href="#research">Research</a>
+        <a href="#commentary">Commentary</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Scholar of Law, History, and Politics.</h1>
+            <p>David Boies Professor of Law at Yale Law School. Chair of the Academic Committee of the Academic Freedom Alliance.</p>
+            <a href="#about" class="btn">Read Full Bio</a>
+        </div>
+        
+        <div class="featured-book">
+            <span class="book-label">Latest Publication</span>
+            <h3>The Impeachment Power</h3>
+            <div style="background:#eee; height:240px; width:160px; margin: 20px auto; display:flex; align-items:center; justify-content:center; color:#999; font-size:0.8rem;">[Book Cover]</div>
+            <a href="#" class="btn" style="background:none; color:var(--text); border:1px solid var(--text)">Explore Books</a>
+        </div>
+    </section>
+
+    <section class="grid">
+        <a href="#research" class="card">
+            <h3>Constitutional Theory</h3>
+            <p>In-depth research on originalism, judicial review, and the development of American constitutionalism.</p>
+        </a>
+        <a href="#afa" class="card">
+            <h3>Academic Freedom</h3>
+            <p>Advocating for the protection of free inquiry and expression within the university system.</p>
+        </a>
+        <a href="#writing" class="card">
+            <h3>Public Commentary</h3>
+            <p>Essays and analysis for The Dispatch, Volokh Conspiracy, and other national outlets.</p>
+        </a>
+    </section>
+</main>
+
+<footer class="container" style="border-top: 1px solid var(--border); margin-top: 4rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
+    &copy; 2026 Keith E. Whittington. Built with precision for the modern web.
+</footer>
+
+</body>
+</html>
