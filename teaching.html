@@ -10,33 +10,33 @@
         body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
         h1, h2, h3 { font-family: 'EB Garamond', serif; }
         
-        header { padding: 2rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
-        .logo { font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
-        nav a { margin-left: 2rem; text-decoration: none; color: var(--muted); font-size: 0.9rem; }
+        header { padding: 1.5rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--muted); font-size: 0.85rem; }
 
         .container { max-width: 900px; margin: 0 auto; padding: 4rem 5%; }
         .page-title { font-size: 3rem; margin-bottom: 1rem; }
         .intro-text { font-size: 1.1rem; color: var(--muted); margin-bottom: 4rem; border-left: 3px solid var(--accent); padding-left: 20px; }
 
         .course-section { margin-bottom: 5rem; }
-        .institution-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 1rem; display: block; }
+        .institution-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 1.5rem; display: block; }
         
-        /* Individual Course Styling */
-        .course-card { background: white; border: 1px solid var(--border); padding: 2rem; margin-bottom: 1.5rem; transition: 0.2s; }
-        .course-card:hover { border-color: var(--accent); }
-        .course-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
-        .course-title { margin: 0; font-size: 1.6rem; }
-        .course-meta { font-size: 0.9rem; color: var(--muted); }
+        .course-card { background: white; border: 1px solid var(--border); padding: 2rem; margin-bottom: 2rem; }
+        .course-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.2rem; }
+        .course-title { margin: 0; font-size: 1.6rem; line-height: 1.2; }
+        .course-meta { font-size: 0.9rem; color: var(--muted); margin-top: 0.3rem; }
+        .seminar-label { font-size: 0.75rem; text-transform: uppercase; color: var(--accent); font-weight: 600; letter-spacing: 1px; display: block; margin-bottom: 0.5rem; }
         
-        .syllabus-btn { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--text); text-decoration: none; color: var(--text); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.2s; }
+        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; }
+        .syllabus-btn { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--text); text-decoration: none; color: var(--text); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.2s; }
         .syllabus-btn:hover { background: var(--text); color: white; }
 
         .archive-list { list-style: none; padding: 0; }
-        .archive-item { padding: 1rem 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-        .archive-item span { color: var(--muted); font-size: 0.9rem; }
+        .archive-item { padding: 1.2rem 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .archive-meta { color: var(--muted); font-size: 0.85rem; }
 
         @media (max-width: 768px) {
-            .course-header { flex-direction: column; gap: 1rem; }
+            .course-header { flex-direction: column; gap: 1.5rem; }
         }
     </style>
 </head>
@@ -47,6 +47,7 @@
     <nav>
         <a href="books.html">Books</a>
         <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
         <a href="commentary.html">Commentary</a>
         <a href="about.html">About</a>
     </nav>
@@ -62,37 +63,67 @@
         <div class="course-card">
             <div class="course-header">
                 <div>
-                    <h3 class="course-title">American Constitutional Law</h3>
-                    <div class="course-meta">Advanced Seminar • Spring 2026</div>
+                    <h3 class="course-title">Advanced Constitutional Law: Federalism and Separation of Powers</h3>
+                    <div class="course-meta">Spring 2026</div>
                 </div>
-                <a href="Syllabus_AmConLaw_2026.pdf" target="_blank" class="syllabus-btn">View Syllabus (PDF)</a>
+                <div class="btn-group">
+                    <a href="Syllabus_FedSep_2026.pdf" target="_blank" class="syllabus-btn">Syllabus</a>
+                    <a href="ReadingList_FedSep_2026.pdf" target="_blank" class="syllabus-btn">Daily Reading List</a>
+                </div>
             </div>
             <p>An examination of the history and development of American constitutionalism, with a focus on federalism, separation of powers, and the role of the judiciary.</p>
+        </div>
+
+        <div class="course-card">
+            <div class="course-header">
+                <div>
+                    <h3 class="course-title">Constitutional Law I</h3>
+                    <div class="course-meta">Fall 2025</div>
+                </div>
+                <div class="btn-group">
+                    <a href="Syllabus_ConLawI_2025.pdf" target="_blank" class="syllabus-btn">Syllabus</a>
+                    <a href="ReadingList_ConLawI_2025.pdf" target="_blank" class="syllabus-btn">Daily Reading List</a>
+                </div>
+            </div>
+            <p>An examination of how the United States has grappled with limits on government power.</p>
+        </div>
+
+        <div class="course-card">
+            <div class="course-header">
+                <div>
+                    <span class="seminar-label">Advanced Seminar</span>
+                    <h3 class="course-title">Constitutional Originalism</h3>
+                    <div class="course-meta">Spring 2025</div>
+                </div>
+                <div class="btn-group">
+                    <a href="Syllabus_Originalism_2025.pdf" target="_blank" class="syllabus-btn">Syllabus</a>
+                </div>
+            </div>
+            <p>An exploration of the scholarly debate surrounding originalism as a theory of constitutional interpretation.</p>
         </div>
     </section>
 
     <section class="course-section">
-        <span class="institution-label">Princeton University (Selected Archive)</span>
-        
+        <span class="institution-label">Princeton University Archive</span>
         <ul class="archive-list">
             <li class="archive-item">
                 <div>
                     <strong>Constitutional Interpretation</strong>
-                    <br><span>POL 315</span>
+                    <div class="archive-meta">POL 315</div>
                 </div>
                 <a href="#" class="syllabus-btn">Syllabus</a>
             </li>
             <li class="archive-item">
                 <div>
                     <strong>American Political Thought</strong>
-                    <br><span>POL 316</span>
+                    <div class="archive-meta">POL 316</div>
                 </div>
                 <a href="#" class="syllabus-btn">Syllabus</a>
             </li>
             <li class="archive-item">
                 <div>
                     <strong>The Judicial Process</strong>
-                    <br><span>POL 320</span>
+                    <div class="archive-meta">POL 320</div>
                 </div>
                 <a href="#" class="syllabus-btn">Syllabus</a>
             </li>
