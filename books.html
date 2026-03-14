@@ -16,34 +16,22 @@
         nav a:hover { color: var(--accent); }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 4rem 5%; }
-        .page-title { font-size: 3rem; margin-bottom: 1rem; }
-
-        .book-cover {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    display: block;
-    /* This creates the '3D' book effect */
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2), 
-                inset 1px 0 0 rgba(255,255,255,0.2);
-    border-radius: 2px 5px 5px 2px; /* Mimics a book spine */
-}
+        .page-title { font-size: 3rem; margin-bottom: 3rem; }
         
-        /* Featured Book Section */
-        .featured-section { margin-bottom: 5rem; }
+        /* Featured Section */
+        .featured-section { margin-bottom: 6rem; }
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; display: block; font-weight: 600; }
+        
         .book-feature { 
             display: grid; 
-            grid-template-columns: 280px 1fr; 
-            gap: 3rem; 
-            background: white; 
-            border: 1px solid var(--border); 
-            padding: 3rem;
-            margin-bottom: 2rem;
-            align-items: center;
+            grid-template-columns: 240px 1fr; 
+            gap: 3.5rem; 
+            margin-bottom: 4rem;
+            align-items: flex-start;
         }
-        .book-cover { width: 100%; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; }
-        .book-info h2 { font-size: 2.2rem; margin-top: 0; margin-bottom: 0.5rem; }
-        .book-tagline { font-style: italic; color: var(--muted); margin-bottom: 1.5rem; display: block; }
+        .book-cover { width: 100%; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; border-radius: 2px 5px 5px 2px; }
+        .book-info h2 { font-size: 2.2rem; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.2; }
+        .book-tagline { font-style: italic; color: var(--muted); margin-bottom: 1.5rem; display: block; font-size: 1.1rem; }
         
         .buy-btn { 
             display: inline-block; 
@@ -55,19 +43,23 @@
             text-transform: uppercase; 
             letter-spacing: 1px; 
             margin-top: 1rem;
+            transition: 0.2s;
         }
         .buy-btn:hover { background: var(--accent); }
 
-        /* Full Catalog Grid */
-        .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
-        .catalog-item { text-align: center; }
-        .catalog-item img { width: 100%; height: auto; margin-bottom: 1rem; transition: 0.3s; border: 1px solid #eee; }
-        .catalog-item:hover img { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
-        .catalog-item h3 { font-size: 1.2rem; margin: 0.5rem 0; }
-        .catalog-item span { font-size: 0.85rem; color: var(--muted); }
+        /* Categorized Catalog */
+        .catalog-section { margin-bottom: 5rem; }
+        .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem 2rem; }
+        
+        .catalog-item { text-align: left; }
+        .cover-small { width: 100%; height: auto; margin-bottom: 1.2rem; box-shadow: 3px 3px 12px rgba(0,0,0,0.1); border: 1px solid #eee; transition: 0.3s; }
+        .catalog-item:hover .cover-small { transform: translateY(-5px); box-shadow: 5px 5px 20px rgba(0,0,0,0.15); }
+        .catalog-item h3 { font-size: 1.2rem; margin: 0.5rem 0; line-height: 1.3; }
+        .catalog-item span { font-size: 0.85rem; color: var(--muted); display: block; }
 
         @media (max-width: 768px) {
-            .book-feature { grid-template-columns: 1fr; text-align: center; }
+            .book-feature { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+            .book-cover { max-width: 200px; margin: 0 auto; }
             .catalog-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
@@ -90,47 +82,103 @@
     <h1 class="page-title">Books</h1>
 
     <section class="featured-section">
+        <span class="section-label">Featured Publications</span>
+        
         <div class="book-feature">
-           <img src="repugnant-laws.jpg" alt="Repugnant Laws Book Cover" class="book-cover">
+            <img src="the-impeachment-power.jpg" alt="The Impeachment Power" class="book-cover">
             <div class="book-info">
-                <h2>Repugnant Laws</h2>
-                <span class="book-tagline">Judicial Review of Acts of Congress from the Founding to the Present</span>
-                <p>Winner of the Thomas M. Cooley Book Prize. A comprehensive history of how the Supreme Court has used its power to strike down federal laws, challenging the traditional narrative of judicial review.</p>
-                <a href="https://www.amazon.com/Repugnant-Laws-Judicial-Congress-Constitutional/dp/0700630368/" target="_blank" rel="noopener noreferrer" class="buy-btn">Order Online</a>
+                <h2>The Impeachment Power</h2>
+                <span class="book-tagline">A history of the constitutional process and its political foundations.</span>
+                <p>An exploration of how the impeachment power has functioned throughout American history, examining the intersection of constitutional law and political necessity.</p>
+                <a href="#" target="_blank" class="buy-btn">Order Online</a>
             </div>
         </div>
 
         <div class="book-feature">
-           <img src="Speak-Freely-cover.jpg" alt="Speak Freely Book Cover" class="book-cover">
+            <img src="you-cant-teach-that.jpg" alt="You Can't Teach That!" class="book-cover">
+            <div class="book-info">
+                <h2>You Can't Teach That!</h2>
+                <span class="book-tagline">The Battle over University Classrooms and the Origins of the Culture Wars</span>
+                <p>A timely analysis of the historical and legal battles over academic freedom and the control of classroom discourse in American higher education.</p>
+                <a href="#" target="_blank" class="buy-btn">Order Online</a>
+            </div>
+        </div>
+
+        <div class="book-feature">
+            <img src="speak-freely.jpg" alt="Speak Freely" class="book-cover">
             <div class="book-info">
                 <h2>Speak Freely</h2>
                 <span class="book-tagline">Why Universities Must Defend Free Speech</span>
                 <p>An urgent defense of the university's mission as a place of free inquiry and open debate, exploring why the protection of controversial speech is essential to the pursuit of truth.</p>
-                <a href="https://www.amazon.com/Speak-Freely-Universities-Defend-Speech/dp/0691191522/" target="_blank" rel="noopener noreferrer" class="buy-btn">Order Online</a>
+                <a href="#" target="_blank" class="buy-btn">Order Online</a>
             </div>
         </div>
     </section>
 
     <hr style="border: 0; border-top: 1px solid var(--border); margin: 4rem 0;">
 
-    <h2 style="font-size: 2rem; margin-bottom: 2rem;">Full Catalog</h2>
-    <div class="catalog-grid">
-        <div class="catalog-item">
-            <div style="background: #f9f9f9; aspect-ratio: 2/3; margin-bottom: 1rem; border: 1px solid #eee;"></div>
-            <h3>Constitutional Construction</h3>
-            <span>Harvard University Press</span>
+    <section class="catalog-section">
+        <span class="section-label">Scholarly Monographs</span>
+        <div class="catalog-grid">
+            <div class="catalog-item">
+                <img src="repugnant-laws.jpg" class="cover-small">
+                <h3>Repugnant Laws</h3>
+                <span>University Press of Kansas</span>
+            </div>
+            <div class="catalog-item">
+                <img src="political-foundations.jpg" class="cover-small">
+                <h3>Political Foundations of Judicial Supremacy</h3>
+                <span>Princeton University Press</span>
+            </div>
+            <div class="catalog-item">
+                <img src="constitutional-construction.jpg" class="cover-small">
+                <h3>Constitutional Construction</h3>
+                <span>Harvard University Press</span>
+            </div>
+            <div class="catalog-item">
+                <img src="constitutional-interpretation.jpg" class="cover-small">
+                <h3>Constitutional Interpretation</h3>
+                <span>University Press of Kansas</span>
+            </div>
         </div>
-        <div class="catalog-item">
-            <div style="background: #f9f9f9; aspect-ratio: 2/3; margin-bottom: 1rem; border: 1px solid #eee;"></div>
-            <h3>Political Foundations of Judicial Supremacy</h3>
-            <span>Princeton University Press</span>
+    </section>
+
+    <section class="catalog-section">
+        <span class="section-label">Textbooks</span>
+        <div class="catalog-grid">
+            <div class="catalog-item">
+                <img src="american-constitutionalism-v1.jpg" class="cover-small">
+                <h3>American Constitutionalism: Vol 1</h3>
+                <span>Oxford University Press</span>
+            </div>
+            <div class="catalog-item">
+                <img src="american-constitutionalism-v2.jpg" class="cover-small">
+                <h3>American Constitutionalism: Vol 2</h3>
+                <span>Oxford University Press</span>
+            </div>
+            <div class="catalog-item">
+                <img src="american-political-thought.jpg" class="cover-small">
+                <h3>American Political Thought</h3>
+                <span>Oxford University Press</span>
+            </div>
         </div>
-        <div class="catalog-item">
-            <div style="background: #f9f9f9; aspect-ratio: 2/3; margin-bottom: 1rem; border: 1px solid #eee;"></div>
-            <h3>Constitutional Interpretation</h3>
-            <span>University Press of Kansas</span>
+    </section>
+
+    <section class="catalog-section">
+        <span class="section-label">Edited Volumes</span>
+        <div class="catalog-grid">
+            <div class="catalog-item">
+                <img src="oxford-handbook-law-politics.jpg" class="cover-small">
+                <h3>Oxford Handbook of Law and Politics</h3>
+                <span>Oxford University Press</span>
+            </div>
+            <div class="catalog-item">
+                <img src="congress-constitution.jpg" class="cover-small">
+                <h3>Congress and the Constitution</h3>
+                <span>Duke University Press</span>
+            </div>
         </div>
-    </div>
+    </section>
 </main>
 
 <footer class="container" style="border-top: 1px solid var(--border); margin-top: 6rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
