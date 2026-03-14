@@ -15,16 +15,16 @@
         nav a { margin-left: 1.2rem; text-decoration: none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 4rem 5%; }
-        .page-title { font-size: 3rem; margin: 0 0 0.5rem 0; }
+        .page-title { font-size: 3rem; margin: 0 0 0.5rem 0; line-height: 1; }
         .page-subtitle { color: var(--muted); margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; }
 
         /* Filter Tabs */
-        .filter-nav { display: flex; gap: 1.5rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; padding-bottom: 1rem; align-items: center; white-space: nowrap; }
+        .filter-nav { display: flex; gap: 1.5rem; border-bottom: 1px solid var(--border); margin-bottom: 1rem; padding-bottom: 1rem; align-items: center; white-space: nowrap; }
         .filter-link { text-decoration: none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: 0.2s; }
-        .filter-link:hover, .filter-link.active { color: var(--accent); }
+        .filter-link:hover { color: var(--accent); }
 
         /* Commentary Layout */
-        .commentary-grid { display: grid; grid-template-columns: 1fr 300px; gap: 5rem; margin-top: 2rem; }
+        .commentary-grid { display: grid; grid-template-columns: 1fr 300px; gap: 5rem; margin-top: 3rem; }
 
         /* Article Entries */
         .article-card { margin-bottom: 4rem; }
@@ -46,9 +46,8 @@
 
         @media (max-width: 900px) {
             .commentary-grid { grid-template-columns: 1fr; }
-            .sidebar-section { border-top: 1px solid var(--border); padding-top: 3rem; }
-            .header-flex { flex-direction: column; gap: 2rem; }
-            .header-photo { width: 100% !important; max-width: 400px; }
+            .header-flex { flex-direction: column; }
+            .header-photo { width: 100% !important; }
         }
     </style>
 </head>
@@ -67,7 +66,7 @@
 </header>
 
 <main class="container">
-    <div class="header-flex" style="display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 1rem;">
+    <div class="header-flex" style="display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 2rem;">
         <div style="flex: 1;">
             <h1 class="page-title">Commentary</h1>
             <p class="page-subtitle">Selected public writing on constitutional law, academic freedom, and American politics.</p>
@@ -105,5 +104,4 @@
 
             <article class="article-card">
                 <span class="article-meta">The Chronicle of Higher Education</span>
-                <h3><a href="https://www.chronicle.com/article/the-assassination-that-broke-campus-free-speech" target="_blank">The Assassination That Broke Campus Free Speech</a></h3>
-                <p class="article-excerpt">A look back at the 19th-century murder of August von Kotzebue and how it triggered a crackdown on German universities, offering a historical warning for modern academic freedom.</
+                <h3><a href="https://www.chronicle.
