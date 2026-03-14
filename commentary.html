@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commentary | Keith E. Whittington</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #fdfdfc; --text: #1a1a1a; --accent: #00356b; --muted: #666; --border: #e5e5e0; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        h1, h2, h3 { font-family: 'EB Garamond', serif; }
+        
+        header { padding: 1.5rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+        nav a { margin-left: 1.2rem; text-decoration: none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 5%; }
+        .page-title { font-size: 3rem; margin-bottom: 1rem; }
+        .page-subtitle { color: var(--muted); margin-bottom: 4rem; font-size: 1.1rem; max-width: 600px; }
+
+        /* Filter Tabs */
+        .filter-nav { display: flex; gap: 2rem; border-bottom: 1px solid var(--border); margin-bottom: 3rem; padding-bottom: 1rem; flex-wrap: wrap; }
+        .filter-link { text-decoration: none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: 0.2s; }
+        .filter-link:hover, .filter-link.active { color: var(--accent); }
+
+        /* Commentary Layout */
+        .commentary-grid { display: grid; grid-template-columns: 1fr 300px; gap: 5rem; }
+
+        /* Article Entries */
+        .article-card { margin-bottom: 4rem; }
+        .article-meta { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; display: block; }
+        .article-card h3 { font-size: 1.8rem; margin: 0 0 1rem 0; line-height: 1.2; }
+        .article-card h3 a { text-decoration: none; color: var(--text); transition: 0.2s; }
+        .article-card h3 a:hover { color: var(--accent); }
+        .article-excerpt { color: #444; margin-bottom: 1.5rem; font-size: 1rem; }
+        .article-date { font-size: 0.85rem; color: var(--muted); }
+
+        /* Sidebar Sections */
+        .sidebar-section { margin-bottom: 3.5rem; }
+        .sidebar-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 1.5rem; display: block; border-bottom: 1px solid var(--border); padding-bottom: 10px; font-weight: 600; }
+        
+        .media-item { margin-bottom: 1.5rem; }
+        .media-item strong { display: block; font-size: 0.95rem; line-height: 1.3; margin-bottom: 5px; }
+        .media-item span { font-size: 0.85rem; color: var(--muted); display: block; margin-bottom: 5px; }
+        .media-link { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); text-decoration: none; font-weight: 600; }
+
+        @media (max-width: 900px) {
+            .commentary-grid { grid-template-columns: 1fr; }
+            .sidebar-section { border-top: 1px solid var(--border); padding-top: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">KEITH E. WHITTINGTON</a>
+    <nav>
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="databases.html">Databases</a>
+        <a href="commentary.html" style="color: var(--accent); font-weight: 600;">Commentary</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="page-title">Commentary</h1>
+    <p class="page-subtitle">Public writing and media on constitutional law, academic freedom, and American politics.</p>
+
+    <div class="filter-nav">
+        <a href="#" class="filter-link active">Latest All</a>
+        <a href="https://thedispatch.com/author/keith-e-whittington/" target="_blank" class="filter-link">The Dispatch</a>
+        <a href="https://reason.com/volokh/author/kwhittington/" target="_blank" class="filter-link">Volokh Conspiracy</a>
+        <a href="#" class="filter-link">Op-Eds & Articles</a>
+    </div>
+
+    <div class="commentary-grid">
+        <section>
+            <article class="article-card">
+                <span class="article-meta">The Dispatch</span>
+                <h3><a href="#">The Constitutional Logic of the Impeachment Power</a></h3>
+                <p class="article-excerpt">A historical exploration of how impeachment functions as a political tool for constitutional maintenance, rather than a strictly legal proceeding.</p>
+                <span class="article-date">March 12, 2026</span>
+            </article>
+
+            <article class="article-card">
+                <span class="article-meta">The Volokh Conspiracy</span>
+                <h3><a href="#">Academic Freedom and the Boundaries of Inquiry</a></h3>
+                <p class="article-excerpt">Discussing the vital distinction between institutional neutrality and individual professorial speech in the modern university.</p>
+                <span class="article-date">February 28, 2026</span>
+            </article>
+
+            <article class="article-card">
+                <span class="article-meta">Law & Liberty</span>
+                <h3><a href="#">The Myths of Court Packing</a></h3>
+                <p class="article-excerpt">Examining the political consequences of expanding the Supreme Court and what history tells us about institutional stability.</p>
+                <span class="article-date">January 15, 2026</span>
+            </article>
+        </section>
+
+        <aside>
+            <div class="sidebar-section">
+                <span class="sidebar-label">Podcasts & Media</span>
+                
+                <div class="media-item">
+                    <span>The Dispatch Podcast</span>
+                    <strong>Constitutional Originalism and the Supreme Court</strong>
+                    <a href="#" class="media-link">Listen Now →</a>
+                </div>
+
+                <div class="media-item">
+                    <span>Hoover Institution</span>
+                    <strong>Panel: The Future of Free Speech on Campus</strong>
+                    <a href="#" class="media-link">Watch Video →</a>
+                </div>
+
+                <div class="media-item">
+                    <span>Law and Liberty</span>
+                    <strong>Interview: Repugnant Laws and the History of Judicial Review</strong>
+                    <a href="#" class="media-link">Listen Now →</a>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <span class="sidebar-label">External Archives</span>
+                <div class="media-item">
+                    <a href="https://thedispatch.com/author/keith-e-whittington/" target="_blank" class="media-link">Full Archive at The Dispatch</a>
+                </div>
+                <div class="media-item">
+                    <a href="https://reason.com/volokh/author/kwhittington/" target="_blank" class="media-link">Full Archive at Volokh Conspiracy</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer class="container" style="border-top: 1px solid var(--border); margin-top: 6rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
+    &copy; 2026 Keith E. Whittington.
+</footer>
+
+</body>
+</html>
