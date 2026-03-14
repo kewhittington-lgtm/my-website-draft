@@ -66,6 +66,9 @@
             transition: 0.2s;
         }
         .buy-btn:hover { background: var(--accent); }
+        .book-info h2 a:hover {
+    color: var(--accent); /* Transitions to Yale Blue on hover */
+}
 
         /* Categorized Catalog */
         .catalog-section { margin-bottom: 5rem; }
@@ -104,16 +107,16 @@
     <section class="featured-section">
         <span class="section-label">Featured Publications</span>
         
-        <div class="book-feature">
-          
-            <img src="https://m.media-amazon.com/images/I/41QKEBidnML._SY445_SX342_ML2_.jpg" alt="The Impeachment Power" class="book-cover">
-            <div class="book-info">
-                <h2> <a href="the-impeachment-power.html">The Impeachment Power</h2>
-                <span class="book-tagline">The Law, Politics, and Purpose of an Extraordinary Constitutional Tool</span>
-                <p>An exploration of how the impeachment power has functioned throughout American history, examining the intersection of constitutional law and political necessity.</p>
-                <a href="https://www.amazon.com/Impeachment-Power-Politics-Extraordinary-Constitutional/dp/0691265399/" target="_blank" class="buy-btn">Order Online</a>
-            </div>
-        </div>
+       <div class="book-info">
+    <h2>
+        <a href="the-impeachment-power.html" style="text-decoration: none; color: inherit;">
+            The Impeachment Power
+        </a>
+    </h2>
+    <span class="book-tagline">The Law, Politics, and Purpose of an Extraordinary Constitutional Tool</span>
+    <p>An exploration of how the impeachment power has functioned throughout American history, examining the intersection of constitutional law and political necessity.</p>
+    <a href="https://www.amazon.com/Impeachment-Power-Politics-Extraordinary-Constitutional/dp/0691265399/" target="_blank" class="buy-btn">Order Online</a>
+</div>
 
         <div class="book-feature">
             <img src="https://m.media-amazon.com/images/I/51YkeqVfsXL._SY466_.jpg" alt="You Can't Teach That!" class="book-cover">
