@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judicial Review of Congress Database | Keith E. Whittington</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #fdfdfc; --text: #1a1a1a; --accent: #00356b; --muted: #666; --border: #e5e5e0; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        h1, h2, h3 { font-family: 'EB Garamond', serif; }
+        
+        header { padding: 1.5rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--muted); font-size: 0.85rem; transition: 0.2s; }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 5%; }
+        
+        .page-header { margin-bottom: 3rem; }
+        .page-title { font-size: 2.8rem; line-height: 1.2; margin-bottom: 1rem; }
+        
+        .main-content { font-size: 1.1rem; color: #333; margin-bottom: 4rem; }
+        
+        /* Resource Section */
+        .resource-box { background: white; border: 1px solid var(--border); padding: 2.5rem; margin-bottom: 3rem; }
+        .resource-header { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 1.5rem; display: block; font-weight: 600; }
+        
+        .download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+        .download-link { 
+            display: flex; 
+            align-items: center; 
+            padding: 1rem; 
+            border: 1px solid var(--border); 
+            text-decoration: none; 
+            color: var(--text); 
+            font-size: 0.9rem; 
+            transition: 0.2s;
+        }
+        .download-link:hover { background: #f9f9f7; border-color: var(--text); }
+        .download-link svg { margin-right: 12px; color: var(--muted); }
+
+        /* Citation Box */
+        .citation-box { background: #f4f4f2; padding: 2rem; border-left: 4px solid var(--accent); margin-top: 4rem; }
+        .citation-text { font-family: monospace; font-size: 0.9rem; color: #444; }
+
+        .fig-container { margin: 3rem 0; border: 1px solid var(--border); padding: 1rem; background: white; text-align: center; }
+        .fig-caption { font-size: 0.85rem; color: var(--muted); margin-top: 1rem; font-style: italic; }
+
+        @media (max-width: 768px) { .download-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">KEITH E. WHITTINGTON</a>
+    <nav>
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="commentary.html">Commentary</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="container">
+    <article class="page-header">
+        <h1 class="page-title">Judicial Review of Congress Database</h1>
+        <p style="font-size: 1.2rem; color: var(--muted);">1789&ndash;2022</p>
+    </article>
+
+    <section class="main-content">
+        <p>The Judicial Review of Congress dataset catalogs all the cases in which the U.S. Supreme Court has substantively reviewed the constitutionality of a provision or application of a federal law. The dataset aims to be the most comprehensive accounting of Supreme Court cases both upholding and invalidating provisions of federal statutes.</p>
+        
+        <p>The database currently includes 1,323 cases decided by the Court from its founding through its October 2021 term and related pieces of information about those cases. Methodology for identifying cases can be found in the appendix to <em>Repugnant Laws: Judicial Review of Acts of Congress from the Founding to the Present</em> (University Press of Kansas, 2019).</p>
+    </section>
+
+    <div class="resource-box">
+        <span class="resource-header">Data & Documentation</span>
+        <div class="download-grid">
+            <a href="judicial_review_of_congress_database_1789-2022.xlsx" class="download-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Complete Dataset (Excel)
+            </a>
+            <a href="description_of_variables.pdf" class="download-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Description of Variables (PDF)
+            </a>
+            <a href="case_selection_methodology.pdf" class="download-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Case Selection Methodology
+            </a>
+            <a href="cases_invalidating_statutes.pdf" class="download-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Cases Invalidating Provisions
+            </a>
+        </div>
+    </div>
+
+    <div class="fig-container">
+        <div style="background: #f0f0f0; height: 300px; display: flex; align-items: center; justify-content: center; color: #999;">
+            [Comparison Figure Image]
+        </div>
+        <p class="fig-caption">Figure 1: Comparison of Supreme Court cases upholding vs. invalidating federal statutory provisions.</p>
+    </div>
+
+    <section class="citation-box">
+        <span class="resource-header" style="margin-bottom: 0.5rem;">Preferred Citation</span>
+        <div class="citation-text">
+            Keith E. Whittington, The Judicial Review of Congress Database, 1789-2022 (July 2022).
+        </div>
+    </section>
+</main>
+
+<footer class="container" style="border-top: 1px solid var(--border); margin-top: 6rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
+    &copy; 2026 Keith E. Whittington.
+</footer>
+
+</body>
+</html>
