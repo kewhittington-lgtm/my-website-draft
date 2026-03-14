@@ -15,16 +15,16 @@
         nav a { margin-left: 1.2rem; text-decoration: none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 4rem 5%; }
-        .page-title { font-size: 3rem; margin-bottom: 1rem; }
-        .page-subtitle { color: var(--muted); margin-bottom: 4rem; font-size: 1.1rem; max-width: 600px; }
+        .page-title { font-size: 3rem; margin: 0 0 0.5rem 0; }
+        .page-subtitle { color: var(--muted); margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; }
 
         /* Filter Tabs */
-        .filter-nav { display: flex; gap: 2rem; border-bottom: 1px solid var(--border); margin-bottom: 3rem; padding-bottom: 1rem; flex-wrap: wrap; }
+        .filter-nav { display: flex; gap: 1.5rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; padding-bottom: 1rem; align-items: center; white-space: nowrap; }
         .filter-link { text-decoration: none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: 0.2s; }
         .filter-link:hover, .filter-link.active { color: var(--accent); }
 
         /* Commentary Layout */
-        .commentary-grid { display: grid; grid-template-columns: 1fr 300px; gap: 5rem; }
+        .commentary-grid { display: grid; grid-template-columns: 1fr 300px; gap: 5rem; margin-top: 2rem; }
 
         /* Article Entries */
         .article-card { margin-bottom: 4rem; }
@@ -47,6 +47,8 @@
         @media (max-width: 900px) {
             .commentary-grid { grid-template-columns: 1fr; }
             .sidebar-section { border-top: 1px solid var(--border); padding-top: 3rem; }
+            .header-flex { flex-direction: column; gap: 2rem; }
+            .header-photo { width: 100% !important; max-width: 400px; }
         }
     </style>
 </head>
@@ -64,117 +66,44 @@
     </nav>
 </header>
 
-  <main class="container">
-    <div style="display: flex; gap: 4rem; align-items: flex-start; margin-bottom: 4rem;">
-        
+<main class="container">
+    <div class="header-flex" style="display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 1rem;">
         <div style="flex: 1;">
             <h1 class="page-title">Commentary</h1>
             <p class="page-subtitle">Selected public writing on constitutional law, academic freedom, and American politics.</p>
 
-            <div class="filter-nav" style="margin-top: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
-                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin-right: 1rem;">Full Archives:</span>
-                <a href="#" class="filter-link">The Dispatch</a>
-                <a href="#" class="filter-link">Volokh Conspiracy</a>
-                <a href="#" class="filter-link">The Chronicle</a>
+            <div class="filter-nav">
+                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin-right: 0.5rem;">Full Archives:</span>
+                <a href="https://thedispatch.com/author/keith-e-whittington/" target="_blank" class="filter-link">The Dispatch</a>
+                <a href="https://reason.com/volokh/author/kwhittington/" target="_blank" class="filter-link">Volokh Conspiracy</a>
+                <a href="https://www.chronicle.com/author/keith-whittington" target="_blank" class="filter-link">The Chronicle</a>
             </div>
         </div>
 
-        <div class="header-photo" style="width: 400px; flex-shrink: 0;">
+        <div class="header-photo" style="width: 320px; flex-shrink: 0;">
             <img src="Harris-Lecture-Conversation.jpg" alt="Keith Whittington speaking" style="width: 100%; border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
     </div>
 
     <div class="commentary-grid">
-        </div>
-</main>
-
-
-
-    <div class="commentary-grid">
         <section>
-    <span class="sidebar-label">Featured Articles</span>
-    
-    <article class="article-card">
-        <span class="article-meta">The Dispatch</span>
-        <h3><a href="https://thedispatch.com/article/birthright-citizenship-history-constitution/" target="_blank">The Constitutional Case for Birthright Citizenship</a></h3>
-        <p class="article-excerpt">An analysis of the historical development of the 14th Amendment’s citizenship clause and why the principle of birthright citizenship remains a stable pillar of American constitutional law.</p>
-        <span class="article-date">Published 2024</span>
-    </article>
+            <span class="sidebar-label">Featured Articles</span>
+            
+            <article class="article-card">
+                <span class="article-meta">The Dispatch</span>
+                <h3><a href="https://thedispatch.com/article/birthright-citizenship-history-constitution/" target="_blank">The Constitutional Case for Birthright Citizenship</a></h3>
+                <p class="article-excerpt">An analysis of the historical development of the 14th Amendment’s citizenship clause and why the principle of birthright citizenship remains a stable pillar of American constitutional law.</p>
+                <span class="article-date">Published 2024</span>
+            </article>
 
-    <article class="article-card">
-        <span class="article-meta">The Dispatch</span>
-        <h3><a href="https://thedispatch.com/article/trump-compact-universities-coercion/" target="_blank">The Problem of Coercion in Higher Education</a></h3>
-        <p class="article-excerpt">Evaluating the legal and political implications of using federal power to reshape higher education through mandates and administrative pressure.</p>
-        <span class="article-date">Selected Feature</span>
-    </article>
+            <article class="article-card">
+                <span class="article-meta">The Dispatch</span>
+                <h3><a href="https://thedispatch.com/article/trump-compact-universities-coercion/" target="_blank">The Problem of Coercion in Higher Education</a></h3>
+                <p class="article-excerpt">Evaluating the legal and political implications of using federal power to reshape higher education through mandates and administrative pressure.</p>
+                <span class="article-date">Selected Feature</span>
+            </article>
 
-    <article class="article-card">
-        <span class="article-meta">The Chronicle of Higher Education</span>
-        <h3><a href="https://www.chronicle.com/article/the-assassination-that-broke-campus-free-speech" target="_blank">The Assassination That Broke Campus Free Speech</a></h3>
-        <p class="article-excerpt">A look back at the 19th-century murder of August von Kotzebue and how it triggered a crackdown on German universities, offering a historical warning for modern academic freedom.</p>
-        <span class="article-date">Op-Ed</span>
-    </article>
-</section>
-
-        <aside>
-    <div class="sidebar-section">
-        <span class="sidebar-label">Media & Podcasts</span>
-        
-        <div class="media-item">
-            <span>The Dispatch: Advisory Opinions</span>
-            <strong>Should Academic Freedom Be a Constitutional Right?</strong>
-            <p style="font-size: 0.85rem; color: var(--muted); margin: 5px 0;">An exploration of the legal boundaries of academic freedom and the origins of campus culture wars.</p>
-            <a href="https://thedispatch.com/podcast/advisoryopinions/should-academic-freedom-be-a-constitutional-right/" target="_blank" class="media-link">Listen Now →</a>
-        </div>
-
-        <div class="media-item">
-            <span>New Books Network: Madison's Notes</span>
-            <strong>The Power of Impeachment</strong>
-            <p style="font-size: 0.85rem; color: var(--muted); margin: 5px 0;">A discussion on the James Madison Program’s podcast regarding the historical and political foundations of the impeachment power.</p>
-            <a href="https://www.youtube.com/watch?v=U7YtRigpdN8" target="_blank" class="media-link">Watch Discussion →</a>
-        </div>
-
-        <div class="media-item">
-            <span>The Dispatch: The Remnant</span>
-            <strong>Impeach!</strong>
-            <p style="font-size: 0.85rem; color: var(--muted); margin: 5px 0;">A deep dive into the constitutional necessity of the impeachment power with Jonah Goldberg.</p>
-            <a href="https://thedispatch.com/podcast/remnant/impeach/" target="_blank" class="media-link">Listen Now →</a>
-        </div>
-
-        <div class="media-item">
-            <span>The Federalist Society</span>
-            <strong>Birthright Citizenship in Context</strong>
-            <p style="font-size: 0.85rem; color: var(--muted); margin: 5px 0;">A panel discussion on the original meaning of the 14th Amendment and the "subject to the jurisdiction" clause.</p>
-            <a href="https://www.youtube.com/watch?v=PS0F_PNlsSo" target="_blank" class="media-link">Watch Panel →</a>
-        </div>
-
-      <div class="media-item">
-    <span>National Constitution Center</span>
-    <strong>The Battle Over Free Speech on Campus</strong>
-    <p style="font-size: 0.85rem; color: var(--muted); margin: 5px 0;">A 'We the People' podcast discussion on the history of academic freedom and the constitutional status of classroom speech.</p>
-    <a href="https://constitutioncenter.org/news-debate/podcasts/the-battle-over-free-speech-on-campus" target="_blank" class="media-link">Listen Now →</a>
-</div>
-    </div>
-
-    <div class="sidebar-section">
-        <span class="sidebar-label">Full Writing Archives</span>
-        <div class="media-item" style="margin-bottom: 0.8rem;">
-            <a href="https://thedispatch.com/author/keith-e-whittington/" target="_blank" class="media-link" style="font-size: 0.85rem;">The Dispatch Archive</a>
-        </div>
-        <div class="media-item" style="margin-bottom: 0.8rem;">
-            <a href="https://reason.com/volokh/author/kwhittington/" target="_blank" class="media-link" style="font-size: 0.85rem;">Volokh Conspiracy Archive</a>
-        </div>
-        <div class="media-item">
-            <a href="https://www.chronicle.com/author/keith-whittington" target="_blank" class="media-link" style="font-size: 0.85rem;">The Chronicle Archive</a>
-        </div>
-    </div>
-</aside>
-    </div>
-</main>
-
-<footer class="container" style="border-top: 1px solid var(--border); margin-top: 6rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
-    &copy; 2026 Keith E. Whittington.
-</footer>
-
-</body>
-</html>
+            <article class="article-card">
+                <span class="article-meta">The Chronicle of Higher Education</span>
+                <h3><a href="https://www.chronicle.com/article/the-assassination-that-broke-campus-free-speech" target="_blank">The Assassination That Broke Campus Free Speech</a></h3>
+                <p class="article-excerpt">A look back at the 19th-century murder of August von Kotzebue and how it triggered a crackdown on German universities, offering a historical warning for modern academic freedom.</
