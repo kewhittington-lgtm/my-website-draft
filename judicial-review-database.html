@@ -12,7 +12,15 @@
         
         header { padding: 1.5rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
         .logo { font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
-        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--muted); font-size: 0.85rem; transition: 0.2s; }
+        nav a { 
+    margin-left: 1.2rem; /* Reduced slightly from 1.5rem to fit more items */
+    text-decoration: none; 
+    color: var(--muted); 
+    font-size: 0.8rem; /* Slightly smaller for a cleaner look */
+    text-transform: uppercase; /* Adds a professional, menu-like feel */
+    letter-spacing: 0.5px;
+    transition: 0.2s; 
+}
         nav a:hover { color: var(--accent); }
 
         .container { max-width: 900px; margin: 0 auto; padding: 4rem 5%; }
@@ -58,6 +66,7 @@
         <a href="books.html">Books</a>
         <a href="research.html">Research</a>
         <a href="teaching.html">Teaching</a>
+     <a href="databases.html">Databases</a>
         <a href="commentary.html">Commentary</a>
         <a href="about.html">About</a>
     </nav>
