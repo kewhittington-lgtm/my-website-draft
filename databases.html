@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Databases | Keith E. Whittington</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #fdfdfc; --text: #1a1a1a; --accent: #00356b; --muted: #666; --border: #e5e5e0; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        h1, h2, h3 { font-family: 'EB Garamond', serif; }
+        
+        header { padding: 1.5rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--muted); font-size: 0.85rem; transition: 0.2s; }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 5%; }
+        .page-title { font-size: 3rem; margin-bottom: 1rem; }
+        .intro-text { font-size: 1.1rem; color: var(--muted); margin-bottom: 4rem; max-width: 750px; }
+
+        /* Focused Database Grid */
+        .db-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        
+        /* The Judicial Review card takes full width for prominence */
+        .db-card.featured { grid-column: 1 / -1; }
+
+        .db-card { 
+            background: white; 
+            border: 1px solid var(--border); 
+            padding: 2.5rem; 
+            display: flex; 
+            flex-direction: column;
+            transition: 0.3s;
+        }
+        .db-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+        
+        .db-title { font-size: 1.7rem; margin: 0 0 1rem 0; line-height: 1.2; }
+        .db-desc { font-size: 1rem; color: #444; margin-bottom: 2rem; flex-grow: 1; }
+        
+        .db-link { 
+            display: inline-block; 
+            padding: 0.8rem 1.5rem; 
+            background: var(--text); 
+            color: white; 
+            text-decoration: none; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            text-align: center;
+            width: fit-content;
+        }
+        .db-link:hover { background: var(--accent); }
+
+        @media (max-width: 768px) {
+            .db-grid { grid-template-columns: 1fr; }
+            .db-card.featured { grid-column: auto; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">KEITH E. WHITTINGTON</a>
+    <nav>
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="commentary.html">Commentary</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="page-title">Public Databases</h1>
+    <p class="intro-text">A collection of research materials, datasets, and primary source documents curated for the study of American constitutionalism and political development.</p>
+
+    <div class="db-grid">
+        <div class="db-card featured">
+            <h3 class="db-title">Judicial Review of Congress Database</h3>
+            <p class="db-desc">The most comprehensive accounting of U.S. Supreme Court cases substantively reviewing the constitutionality of federal laws. The dataset catalogs over 1,300 cases from the founding through the October 2021 term, documenting every instance where the Court has both upheld and invalidated provisions of federal statutes.</p>
+            <div style="display: flex; gap: 1rem;">
+                <a href="https://kewhitt.scholar.princeton.edu/judicial-review-congress-database" target="_blank" class="db-link">Explore the Dataset</a>
+            </div>
+        </div>
+
+        <div class="db-card">
+            <h3 class="db-title">History of American Constitutionalism</h3>
+            <p class="db-desc">A repository of hundreds of freely available documents excerpting primary source material, including court cases, legislative hearings, and executive branch legal opinions. This site serves as a companion to the <em>American Constitutionalism</em> casebooks.</p>
+            <a href="https://kewhitt.scholar.princeton.edu/primary-documents-history-american-constitutionalism" target="_blank" class="db-link">Access Documents</a>
+        </div>
+
+        <div class="db-card">
+            <h3 class="db-title">History of American Political Thought</h3>
+            <p class="db-desc">A collection of scores of primary source documents—including books, pamphlets, speeches, and novels—exploring the evolution of American political thought. This archive serves as a companion to the <em>American Political Thought</em> reader.</p>
+            <a href="https://kewhitt.scholar.princeton.edu/primary-documents-history-american-political-thought" target="_blank" class="db-link">Access Documents</a>
+        </div>
+    </div>
+</main>
+
+<footer class="container" style="border-top: 1px solid var(--border); margin-top: 6rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
+    &copy; 2026 Keith E. Whittington.
+</footer>
+
+</body>
+</html>
