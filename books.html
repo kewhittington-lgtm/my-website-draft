@@ -22,14 +22,34 @@
         .featured-section { margin-bottom: 6rem; }
         .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; display: block; font-weight: 600; }
         
-        .book-feature { 
-            display: grid; 
-            grid-template-columns: 240px 1fr; 
-            gap: 3.5rem; 
-            margin-bottom: 4rem;
-            align-items: flex-start;
-        }
-        .book-cover { width: 100%; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; border-radius: 2px 5px 5px 2px; }
+       /* Featured covers should be large and prominent */
+.book-feature { 
+    display: grid; 
+    grid-template-columns: 320px 1fr; /* Increased from 240px */
+    gap: 4rem; 
+    margin-bottom: 5rem;
+    align-items: center; /* Centers text vertically against the larger image */
+}
+
+.book-cover { 
+    width: 100%; 
+    max-width: 320px; 
+    height: auto;
+    box-shadow: 15px 15px 40px rgba(0,0,0,0.15); 
+    border: 1px solid #eee; 
+    border-radius: 2px 5px 5px 2px;
+}
+
+/* Catalog covers remain smaller for the grid layout */
+.cover-small { 
+    width: 100%; 
+    max-width: 200px; /* Ensures they don't grow too large in the grid */
+    height: auto; 
+    margin-bottom: 1.2rem; 
+    box-shadow: 3px 3px 12px rgba(0,0,0,0.1); 
+    border: 1px solid #eee; 
+    transition: 0.3s; 
+}
         .book-info h2 { font-size: 2.2rem; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.2; }
         .book-tagline { font-style: italic; color: var(--muted); margin-bottom: 1.5rem; display: block; font-size: 1.1rem; }
         
