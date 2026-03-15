@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You Can't Teach That! | Keith E. Whittington</title>
+    <title>Repugnant Laws | Keith E. Whittington</title>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --bg: #fdfdfc; --text: #1a1a1a; --accent: #00356b; --muted: #666; --border: #e5e5e0; }
@@ -72,15 +72,15 @@
     </nav>
 
     <section class="book-hero">
-        <img src="https://m.media-amazon.com/images/I/51YkeqVfsXL._SY466_.jpg" alt="You Can't Teach That! Book Cover" class="book-cover">
+        <img src="repugnant-laws.jpg" alt="Repugnant Laws" class="book-cover">
         <div class="book-header">
-            <h1>You Can't Teach That!</h1>
-            <span class="book-subtitle">The Battle over University Classrooms</span>
+            <h1>Repugnant Laws</h1>
+            <span class="book-subtitle">Judicial Review of Acts of Congress from the Founding to the Present</span>
             <p style="font-size: 1.1rem;">A timely analysis of the historical and legal battles over academic freedom and the control of classroom discourse in American higher education, exploring how current legislative restrictions echo past conflicts.</p>
             
             <div class="cta-group">
-                <a href="https://www.politybooks.com/bookdetail?book_slug=you-cant-teach-that-the-battle-over-university-classrooms--9781509564521" target="_blank" class="btn btn-primary">Polity Books</a>
-                <a href="https://www.amazon.com/You-Cant-Teach-That-University/dp/1509564535/" target="_blank" class="btn btn-secondary">Amazon</a>
+                <a href="https://kansaspress.ku.edu/9780700630363/" target="_blank" class="btn btn-primary">Polity Books</a>
+                <a href="https://www.amazon.com/Repugnant-Laws-Judicial-Congress-Constitutional/dp/0700627790" target="_blank" class="btn btn-secondary">Amazon</a>
             </div>
         </div>
     </section>
