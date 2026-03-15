@@ -41,8 +41,9 @@
         .praise-cite { display: block; margin-top: 10px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
 
         .sidebar-box { background: #f9f9f7; padding: 2rem; margin-bottom: 2rem; border: 1px solid var(--border); }
-        .sidebar-box h4 { margin-top: 0; font-size: 1.1rem; }
-        .sidebar-box p { font-size: 0.9rem; color: #555; margin-bottom: 0; }
+        .sidebar-box h4 { margin-top: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; color: var(--accent); }
+        .sidebar-box p, .sidebar-box li { font-size: 0.85rem; color: #555; line-height: 1.5; margin-bottom: 0.5rem; list-style: none; }
+        .sidebar-box ul { padding: 0; margin: 0; }
 
         @media (max-width: 850px) {
             .book-hero, .details-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -87,14 +88,15 @@
 
     <div class="details-grid">
         <section>
-              <span class="section-title">Reviews</span>
+            <span class="section-title">Reviews</span>
             
             <div class="praise-item">
                 <p class="praise-text">"Repugnant Laws stands as a helpful corrective to the partisan narratives of both sides—and is sure to set the standard for books of its kind for decades to come."</p>
                 <cite class="praise-cite">The American Interest</cite>
             </div>
 
-              <p class="praise-text">"Whittington presents an extraordinarily comprehensive evaluation of the Supreme Court’s choices to invalidate or uphold federal legislation throughout US history."</p>
+            <div class="praise-item">
+                <p class="praise-text">"Whittington presents an extraordinarily comprehensive evaluation of the Supreme Court’s choices to invalidate or uphold federal legislation throughout US history."</p>
                 <cite class="praise-cite">Perspectives on Politics</cite>
             </div>
 
@@ -127,32 +129,33 @@
         </section>
 
         <aside class="sidebar-column">
-           <div class="sidebar-box">
+            <div class="sidebar-box">
                 <h4>Awards</h4>
                 <ul>
-                  <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.8rem;">
                     <li>Thomas M. Cooley Book Prize</li>
                     <li>Choice Outstanding Academic Title</li>
-                  </p>
                 </ul>
             </div>
             <div class="sidebar-box">
                 <h4>Published</h4>
-                <p>2019 (Hardback and ebook)<br>2020 (Paperback)</p>
+                <p>2019 (Hardback and ebook)</p>
+                <p>2020 (Paperback)</p>
             </div>
             <div class="sidebar-box">
                 <h4>Publisher</h4>
                 <p>University Press of Kansas</p>
             </div>
-           <div class="sidebar-box">
-    <h4>Resources</h4>
-    <a href="toc-repugnant.pdf" target="_blank" class="resource-link" style="text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.9rem;">
-        View Table of Contents (PDF) →
-    </a>
-</div>
-               <div class="sidebar-box">
+            <div class="sidebar-box">
+                <h4>Resources</h4>
+                <a href="toc-repugnant.pdf" target="_blank" style="text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.85rem; display: block;">
+                    View Table of Contents (PDF) →
+                </a>
+            </div>
+            <div class="sidebar-box">
                 <h4>Related Research</h4>
-                <p><a href="databases.html" style="color:var(--accent); text-decoration:none; font-weight:600;">Explore the Judicial Review of Congress Database →</a></p>
+                <a href="databases.html" style="color:var(--accent); text-decoration:none; font-weight:600; font-size: 0.85rem; display: block;">
+                    Explore the Judicial Review of Congress Database →
+                </a>
             </div>
         </aside>
     </div>
