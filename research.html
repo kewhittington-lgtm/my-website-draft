@@ -18,23 +18,26 @@
         .page-title { font-size: 3rem; margin: 0 0 0.5rem 0; }
         .research-statement { font-size: 1.2rem; color: #444; margin-bottom: 4rem; font-family: 'EB Garamond', serif; font-style: italic; border-left: 2px solid var(--accent); padding-left: 1.5rem; max-width: 850px; }
 
-        /* Bucket Styling */
         .bucket { margin-bottom: 6rem; }
         .bucket-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; display: block; font-weight: 600; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
         
         .monograph-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; }
-        .book-card { display: flex; gap: 1.5rem; align-items: start; }
+        .book-card { display: flex; gap: 1.5rem; align-items: start; text-decoration: none; color: inherit; transition: transform 0.2s; }
+        .book-card:hover { transform: translateY(-3px); }
         .book-card img { width: 100px; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; }
-        .book-info h4 { margin: 0 0 5px 0; font-size: 1.3rem; line-height: 1.2; }
+        .book-info h4 { margin: 0 0 5px 0; font-size: 1.3rem; line-height: 1.2; color: var(--text); }
         .book-info p { margin: 0; font-size: 0.85rem; color: var(--muted); }
 
         .article-list { list-style: none; padding: 0; }
         .article-item { margin-bottom: 1.5rem; padding-left: 1rem; border-left: 1px solid var(--border); }
         .article-item strong { display: block; font-size: 1rem; line-height: 1.4; }
         .article-item span { font-size: 0.85rem; color: var(--muted); font-style: italic; }
-        .article-link { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); text-decoration: none; font-weight: 600; display: block; margin-top: 5px; }
+        .article-link { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); text-decoration: none; font-weight: 600; display: inline-block; margin-top: 5px; }
+        .article-link:hover { text-decoration: underline; }
 
-        .sidebar-box { background: #f9f9f7; padding: 2rem; border: 1px solid var(--border); margin-top: 2rem; }
+        .resource-sidebar { background: #f9f9f7; padding: 2.5rem; border: 1px solid var(--border); margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .resource-sidebar h4 { margin-top: 0; grid-column: 1 / -1; font-size: 1.5rem; }
+        .resource-link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; }
     </style>
 </head>
 <body>
@@ -54,114 +57,169 @@
 <main class="container">
     <h1 class="page-title">Research</h1>
     <p class="research-statement">
-        My research examines the intersections of American constitutional history, theory, and institutional development. From the foundational evolution of judicial review to the modern challenges of academic freedom and presidential authority, my work explores how constitutional meaning is constructed and maintained through the complex interplay of law, politics, and historical practice.
+        My research examines the intersections of American constitutional history, theory, and institutional development. [span_0](start_span)[span_1](start_span)From the foundational evolution of judicial review to the modern challenges of academic freedom and presidential authority, my work explores how constitutional meaning is constructed and maintained through the complex interplay of law, politics, and historical practice.[span_0](end_span)[span_1](end_span)
     </p>
 
     <section class="bucket">
         <span class="bucket-title">Academic Freedom & Free Speech</span>
         <div class="monograph-grid">
-            <div class="book-card">
+            <a href="books/speak-freely.html" class="book-card">
                 <img src="Speak-Freely-cover.jpg" alt="Speak Freely">
                 <div class="book-info">
                     <h4>Speak Freely</h4>
-                    [span_0](start_span)<p>Princeton University Press, 2018[span_0](end_span)</p>
+                    [span_2](start_span)<p>Princeton University Press, 2018[span_2](end_span)</p>
                 </div>
-            </div>
-            <div class="book-card">
+            </a>
+            <a href="books/you-cant-teach-that.html" class="book-card">
                 <img src="You-Cant-Teach-That-cover.jpg" alt="You Can't Teach That!">
                 <div class="book-info">
                     <h4>You Can't Teach That!</h4>
-                    [span_1](start_span)<p>Polity, 2024[span_1](end_span)</p>
+                    [span_3](start_span)<p>Polity, 2024[span_3](end_span)</p>
                 </div>
-            </div>
+            </a>
         </div>
         <ul class="article-list">
             <li class="article-item">
                 <strong>What Can Professors Say in Public? Extramural Speech and the First Amendment</strong>
-                [span_2](start_span)<span>Case Western Reserve Law Review (2023)[span_2](end_span)</span>
-            </li>
+                [span_4](start_span)<span>Case Western Reserve Law Review (2023)[span_4](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
             <li class="article-item">
                 <strong>The Value of Institutional Neutrality for Free Inquiry</strong>
-                [span_3](start_span)<span>First Amendment Law Review (2024)[span_3](end_span)</span>
+                [span_5](start_span)<span>First Amendment Law Review (2024)[span_5](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
+            <li class="article-item">
+                <strong>Free Speech and the Diverse University</strong>
+                [span_6](start_span)<span>Fordham Law Review (2019)[span_6](end_span)</span>
+                <a href="https://ir.lawnet.fordham.edu/flr/vol87/iss6/11/" target="_blank" class="article-link">External Link →</a>
             </li>
             <li class="article-item">
-                <strong>Professorial Speech, the First Amendment, and Legislative Restrictions on Classroom Discussions</strong>
-                [span_4](start_span)<span>Wake Forest Law Review (2023)[span_4](end_span)</span>
+                <strong>Academic Freedom and the Mission of the University</strong>
+                [span_7](start_span)<span>Houston Law Review (2022)[span_7](end_span)</span>
+                <a href="https://houstonlawreview.org/article/34143-academic-freedom-and-the-mission-of-the-university" target="_blank" class="article-link">External Link →</a>
             </li>
+            <li class="article-item">
+                <strong>Diversity Statements, Academic Freedom, and the First Amendment</strong>
+                [span_8](start_span)<span>Nebraska Law Review (2025)[span_8](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
+            <li class="article-item">
+                <strong>The Value of Ideological Diversity Among University Faculty</strong>
+                [span_9](start_span)<span>Social Philosophy and Policy (2021)[span_9](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
         </ul>
     </section>
 
     <section class="bucket">
         <span class="bucket-title">Empirical & Historical Research</span>
         <div class="monograph-grid">
-            <div class="book-card">
+            <a href="books/repugnant-laws.html" class="book-card">
                 <img src="Repugnant-Laws-cover.jpg" alt="Repugnant Laws">
                 <div class="book-info">
                     <h4>Repugnant Laws</h4>
-                    [span_5](start_span)<p>University Press of Kansas, 2019[span_5](end_span)</p>
+                    [span_10](start_span)<p>University Press of Kansas, 2019[span_10](end_span)</p>
                 </div>
-            </div>
-            <div class="book-card">
+            </a>
+            <a href="books/political-foundations.html" class="book-card">
+                <img src="Political-Foundations-cover.jpg" alt="Political Foundations of Judicial Supremacy">
+                <div class="book-info">
+                    <h4>Political Foundations of Judicial Supremacy</h4>
+                    [span_11](start_span)<p>Princeton University Press, 2007[span_11](end_span)</p>
+                </div>
+            </a>
+            <a href="books/impeachment-power.html" class="book-card">
                 <img src="Impeachment-Power-cover.jpg" alt="The Impeachment Power">
                 <div class="book-info">
                     <h4>The Impeachment Power</h4>
-                    [span_6](start_span)<p>Princeton University Press, 2024[span_6](end_span)</p>
+                    [span_12](start_span)<p>Princeton University Press, 2024[span_12](end_span)</p>
                 </div>
-            </div>
+            </a>
         </div>
         <ul class="article-list">
             <li class="article-item">
-                <strong>Judicial Review of Congress before the Civil War</strong>
-                [span_7](start_span)<span>Georgetown Law Journal (2009)[span_7](end_span)</span>
-            </li>
-            <li class="article-item">
-                <strong>The Political Constitution of Federalism in Antebellum America</strong>
-                [span_8](start_span)<span>Publius (1996)[span_8](end_span)</span>
+                <strong>"Interpose Your Friendly Hand": Political Supports for the Exercise of Judicial Review</strong>
+                [span_13](start_span)<span>American Political Science Review (2005)[span_13](end_span)</span>
+                <a href="https://www.cambridge.org/core/journals/american-political-science-review/article/abs/interpose-your-friendly-hand-political-supports-for-the-exercise-of-judicial-review-by-the-united-states-supreme-court/B4094C992E9A34C4F4E4F4F4F4F4F4F4" target="_blank" class="article-link">External Link →</a>
             </li>
             <li class="article-item">
                 <strong>The Myth of the Nondelegation Doctrine</strong>
-                [span_9](start_span)<span>University of Pennsylvania Law Review (2017)[span_9](end_span)</span>
+                [span_14](start_span)<span>University of Pennsylvania Law Review (2017)[span_14](end_span)</span>
+                <a href="https://scholarship.law.upenn.edu/penn_law_review/vol165/iss2/3/" target="_blank" class="article-link">External Link →</a>
             </li>
+            <li class="article-item">
+                <strong>Executive Power in American Institutional Development</strong>
+                [span_15](start_span)<span>Perspectives on Politics (2003)[span_15](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
+            <li class="article-item">
+                <strong>Legislative Sanctions and the Strategic Environment of Judicial Review</strong>
+                [span_16](start_span)<span>I-CON: International Journal of Constitutional Law (2003)[span_16](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
+            <li class="article-item">
+                <strong>Taking What They Give Us: Explaining the Court's Federalism Offensive</strong>
+                [span_17](start_span)<span>Duke Law Journal (2001)[span_17](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
+            <li class="article-item">
+                <strong>Partisanship, Norms, and Federal Judicial Appointments</strong>
+                [span_18](start_span)<span>Georgetown Journal of Law and Public Policy (2018)[span_18](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
+            <li class="article-item">
+                <strong>Making a Mountain Out of a Molehill? Marbury and the Construction of the Constitutional Canon</strong>
+                [span_19](start_span)<span>Hastings Constitutional Law Quarterly (2012)[span_19](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
         </ul>
     </section>
 
     <section class="bucket">
         <span class="bucket-title">Normative & Theoretical Research</span>
         <div class="monograph-grid">
-            <div class="book-card">
+            <a href="books/constitutional-interpretation.html" class="book-card">
                 <img src="Constitutional-Interpretation-cover.jpg" alt="Constitutional Interpretation">
                 <div class="book-info">
                     <h4>Constitutional Interpretation</h4>
-                    [span_10](start_span)<p>University Press of Kansas, 1999[span_10](end_span)</p>
+                    [span_20](start_span)<p>University Press of Kansas, 1999[span_20](end_span)</p>
                 </div>
-            </div>
-            <div class="book-card">
+            </a>
+            <a href="books/constitutional-construction.html" class="book-card">
                 <img src="Constitutional-Construction-cover.jpg" alt="Constitutional Construction">
                 <div class="book-info">
                     <h4>Constitutional Construction</h4>
-                    [span_11](start_span)<p>Harvard University Press, 1999[span_11](end_span)</p>
+                    [span_21](start_span)<p>Harvard University Press, 1999[span_21](end_span)</p>
                 </div>
-            </div>
+            </a>
         </div>
         <ul class="article-list">
             <li class="article-item">
                 <strong>The New Originalism</strong>
-                [span_12](start_span)<span>Georgetown Journal of Law and Public Policy (2004)[span_12](end_span)</span>
-            </li>
+                [span_22](start_span)<span>Georgetown Journal of Law and Public Policy (2004)[span_22](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
             <li class="article-item">
                 <strong>Originalism: A Critical Introduction</strong>
-                [span_13](start_span)<span>Fordham Law Review (2013)[span_13](end_span)</span>
+                [span_23](start_span)<span>Fordham Law Review (2013)[span_23](end_span)</span>
+                <a href="https://ir.lawnet.fordham.edu/flr/vol82/iss2/4/" target="_blank" class="article-link">External Link →</a>
             </li>
             <li class="article-item">
-                <strong>The Role of Norms in Our Constitutional Order</strong>
-                [span_14](start_span)<span>Harvard Journal of Law and Public Policy (2021)[span_14](end_span)</span>
+                <strong>Extrajudicial Constitutional Interpretation: Three Objections and Responses</strong>
+                [span_24](start_span)<span>North Carolina Law Review (2002)[span_24](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
+            <li class="article-item">
+                <strong>The Status of Unwritten Constitutional Conventions in the United States</strong>
+                [span_25](start_span)<span>University of Illinois Law Review (2013)[span_25](end_span)</span>
+                <a href="https://illinoislawreview.org/wp-content/uploads/2013/11/Whittington.pdf" target="_blank" class="article-link">External Link →</a>
             </li>
+            <li class="article-item">
+                <strong>Yet Another Constitutional Crisis?</strong>
+                [span_26](start_span)<span>William and Mary Law Review (2002)[span_26](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
+            <li class="article-item">
+                <strong>Originalism, Constitutional Construction, and the Problem of Faithless Electors</strong>
+                [span_27](start_span)<span>Arizona Law Review (2017)[span_27](end_span)</span>
+                <a href="#" class="article-link">Read Article →</a> </li>
         </ul>
     </section>
 
-    <div class="sidebar-box">
-        <h4>Full Bibliography & Resources</h4>
-        <p>For an exhaustive list of publications and forthcoming work, please refer to my <a href="CV_Whittington.pdf" target="_blank" style="color:var(--accent); font-weight:600;">Full Curriculum Vitae</a> or visit my <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=165463" target="_blank" style="color:var(--accent); font-weight:600;">SSRN Author Page</a>.</p>
+    <div class="resource-sidebar">
+        <h4>Comprehensive Resources</h4>
+        [span_28](start_span)<a href="CV_Whittington.pdf" target="_blank" class="resource-link">Full Curriculum Vitae (PDF)[span_28](end_span)</a>
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=117569" target="_blank" class="resource-link">SSRN Author Page</a>
+        <a href="https://scholar.google.com/citations?user=OIoZ2vgAAAAJ&hl=en" target="_blank" class="resource-link">Google Scholar Profile</a>
     </div>
 </main>
 
