@@ -20,20 +20,31 @@
         .breadcrumb a { color: var(--muted); text-decoration: none; transition: 0.2s; }
         .breadcrumb a:hover { color: var(--accent); }
 
-        .book-hero { display: grid; grid-template-columns: 350px 1fr; gap: 4rem; margin-bottom: 5rem; align-items: start; }
-        .book-cover { width: 100%; box-shadow: 20px 20px 60px rgba(0,0,0,0.15); border: 1px solid #eee; border-radius: 2px 5px 5px 2px; }
-        
+        /* NEW: Horizontal Image Row Styling */
+        .book-hero-top { margin-bottom: 4rem; text-align: center; }
+        .cover-row { display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; }
+        .book-cover-uniform { 
+            height: 320px; /* Forces uniform height for all covers */
+            width: auto; 
+            box-shadow: 10px 10px 30px rgba(0,0,0,0.1); 
+            border: 1px solid #eee; 
+            border-radius: 2px 4px 4px 2px;
+            transition: transform 0.3s;
+        }
+        .book-cover-uniform:hover { transform: translateY(-5px); }
+
+        .book-header { max-width: 850px; margin: 0 auto; text-align: center; }
         .book-header h1 { font-size: 3.5rem; margin: 0 0 0.5rem 0; line-height: 1.1; }
         .book-subtitle { font-size: 1.4rem; color: var(--muted); font-style: italic; margin-bottom: 2rem; display: block; }
         
-        .cta-group { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+        .cta-group { display: flex; gap: 1rem; margin-top: 2rem; justify-content: center; flex-wrap: wrap; }
         .btn { display: inline-block; padding: 0.9rem 1.8rem; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: 0.3s; }
         .btn-primary { background: var(--text); color: white; }
         .btn-primary:hover { background: var(--accent); }
         .btn-secondary { border: 1px solid var(--border); color: var(--text); }
         .btn-secondary:hover { background: #f9f9f7; border-color: var(--text); }
 
-        .details-grid { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; }
+        .details-grid { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; margin-top: 4rem; }
         .section-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; display: block; font-weight: 600; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
 
         .praise-item { margin-bottom: 2.5rem; }
@@ -41,122 +52,4 @@
         .praise-cite { display: block; margin-top: 10px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
 
         .sidebar-box { background: #f9f9f7; padding: 2rem; margin-bottom: 2rem; border: 1px solid var(--border); }
-        .sidebar-box h4 { margin-top: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; color: var(--accent); }
-        .sidebar-box p, .sidebar-box li { font-size: 0.85rem; color: #555; line-height: 1.5; margin-bottom: 0.5rem; list-style: none; }
-        .sidebar-box ul { padding: 0; margin: 0; }
-
-        @media (max-width: 850px) {
-            .book-hero, .details-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .book-cover { max-width: 280px; margin: 0 auto; display: block; }
-            .book-header { text-align: center; }
-            .cta-group { justify-content: center; }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <a href="index.html" class="logo">KEITH E. WHITTINGTON</a>
-    <nav>
-        <a href="books.html">Books</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="databases.html">Databases</a>
-        <a href="commentary.html">Commentary</a>
-        <a href="about.html">About</a>
-    </nav>
-</header>
-
-<main class="container">
-    <nav class="breadcrumb">
-        <a href="books.html">← Back to Books</a>
-    </nav>
-
-    <section class="book-hero">
-        <img src="https://global.oup.com/academic/covers/pdp/9780197527634" alt="American Constituttionalismvol1" class="book-cover">
-         <img src="https://m.media-amazon.com/images/I/71n9cfxf0QL._AC_UY218_.jpg" class="book-cover">
-         <img src="https://m.media-amazon.com/images/I/41Y0REotDlL._SX342_SY445_ML2_.jpg" alt="American Constituttionalismonevolume" class="book-cover">
-        <div class="book-header">
-            <h1>American Constitutionalism</h1>
-            <span class="book-subtitle">Structures, Powers, and Liberties</span>
-            <p style="font-size: 1.1rem;">The definitive two-volume resource for the study of American constitutionalism, integrating judicial cases with a vast array of political and historical materials to trace the development of constitutional law and practice across the entire span of U.S. history.</p>
-            
-            <div class="cta-group">
-                <a href="https://global.oup.com/academic/product/american-constitutionalism-9780197527634?cc=us&lang=en&" target="_blank" class="btn btn-primary">Oxford University Press</a>
-                <a href="https://www.amazon.com/American-Constitutionalism-I-Structures-Government/dp/0197527639/" target="_blank" class="btn btn-secondary">Amazon</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="details-grid">
-        <section>
-         
-            <span class="section-title">Advance Praise</span>
-            
-            <div class="praise-item">
-                <p class="praise-text">"American Constitutionalism marks a new age in the teaching of constitutional law. After using this text, I can't imagine teaching constitutional law any other way."</p>
-                <cite class="praise-cite">Julie Novkov, University at Albany, State University of New York</cite>
-            </div>
-
-            <div class="praise-item">
-                <p class="praise-text">"This is a major achievement--a gold-standard teaching tool doubling as a penetrating account of the development of constitutional rights and liberties in America."</p>
-                <cite class="praise-cite">Ken I. Kersch, Boston College</cite>
-            </div>
-
-            <div class="praise-item">
-                <p class="praise-text">"American Constitutionalism is easily the best undergraduate constitutional law text on the market. It goes beyond other texts by including not only important Supreme Court cases, but also materials illustrating that constitutional development is the product of interactions between many individuals and institutions."</p>
-                <cite class="praise-cite">Paul Nolette, Marquette University</cite>
-            </div>
-      
-            <div class="praise-item">
-                <p class="praise-text">"For me, its primary strength is in the way it integrates law and politics. Too many constitutional law textbooks before this spent too little attention to the political factors that surround and shape constitutional law. It very self consciously treats both law and politics as significant dynamics and contributors to the evolution of constitutional law."</p>
-                <cite class="praise-cite">Shauna Fisher, West Virginia University</cite>
-            </div>
-      
-            <div class="praise-item">
-                <p class="praise-text">"The historical approach of American Constitutionalism is excellent. It has encouraged me to completely rethink my course with attention to changes in our regime over time. Equally excellent is the inclusion of influential constitutional statements from congressional floor debates and presidential addresses."</p>
-                <cite class="praise-cite">Stewart Gardner, Boise State University</cite>
-            </div>
-     </section>
-
-        <aside class="sidebar-column">
-            <div class="sidebar-box">
-                <h4>Awards</h4>
-                <ul>
-                    <li>Teaching and Mentoring Award for Innovative Instructional Materials in Law and Courts</li>
-                </ul>
-            </div>
-            <div class="sidebar-box">
-                <h4>Published</h4>
-                <p>2013 (1st edition)</p>
-                <p>2020 (3rd ed. Paperback and ebook)</p>
-            </div>
-            <div class="sidebar-box">
-                <h4>Publisher</h4>
-                <p>Oxford University Press</p>
-            </div>
-            <div class="sidebar-box">
-                <h4>Resources</h4>
-                <a href="GGW-toc-vol1.pdf" target="_blank" style="text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.85rem; display: block;">
-                    View Table of Contents for Volume 1 (PDF) →
-                </a>
-                  <a href="GGW-toc-vol2.pdf" target="_blank" style="text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.85rem; display: block;">
-                    View Table of Contents for Volume 2 (PDF) →
-                </a>
-            </div>
-            <div class="sidebar-box">
-                <h4>Related Research</h4>
-                <a href="american-constitutionalism-history.html" target="_blank" style="color:var(--accent); text-decoration:none; font-weight:600; font-size: 0.85rem; display: block;">
-                    Explore the Companion Website with Supplemantal Materials →
-                </a>
-            </div>
-        </aside>
-    </div>
-</main>
-
-<footer class="container" style="border-top: 1px solid var(--border); margin-top: 6rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
-    &copy; 2026 Keith E. Whittington.
-</footer>
-
-</body>
-</html>
+        .sidebar-box h4 { margin-top: 0; font-size: 0.9
