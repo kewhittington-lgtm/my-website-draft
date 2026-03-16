@@ -18,69 +18,33 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 4rem 5%; }
         .page-title { font-size: 3rem; margin-bottom: 3rem; }
         
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; display: block; font-weight: 600; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
         /* Featured Section */
         .featured-section { margin-bottom: 6rem; }
-        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; display: block; font-weight: 600; }
-        
-       /* Featured covers should be large and prominent */
-.book-feature { 
-    display: grid; 
-    grid-template-columns: 320px 1fr; /* Increased from 240px */
-    gap: 4rem; 
-    margin-bottom: 5rem;
-    align-items: center; /* Centers text vertically against the larger image */
-}
-
-.book-cover { 
-    width: 100%; 
-    max-width: 320px; 
-    height: auto;
-    box-shadow: 15px 15px 40px rgba(0,0,0,0.15); 
-    border: 1px solid #eee; 
-    border-radius: 2px 5px 5px 2px;
-}
-
-/* Catalog covers remain smaller for the grid layout */
-.cover-small { 
-    width: 100%; 
-    max-width: 200px; /* Ensures they don't grow too large in the grid */
-    height: auto; 
-    margin-bottom: 1.2rem; 
-    box-shadow: 3px 3px 12px rgba(0,0,0,0.1); 
-    border: 1px solid #eee; 
-    transition: 0.3s; 
-}
+        .book-feature { display: grid; grid-template-columns: 320px 1fr; gap: 4rem; margin-bottom: 5rem; align-items: center; }
+        .book-cover { width: 100%; max-width: 320px; height: auto; box-shadow: 15px 15px 40px rgba(0,0,0,0.15); border: 1px solid #eee; border-radius: 2px 5px 5px 2px; }
         .book-info h2 { font-size: 2.2rem; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.2; }
+        .book-info h2 a { text-decoration: none; color: inherit; transition: color 0.2s; }
+        .book-info h2 a:hover { color: var(--accent); }
         .book-tagline { font-style: italic; color: var(--muted); margin-bottom: 1.5rem; display: block; font-size: 1.1rem; }
         
-        .buy-btn { 
-            display: inline-block; 
-            padding: 0.7rem 1.5rem; 
-            background: var(--text); 
-            color: white; 
-            text-decoration: none; 
-            font-size: 0.75rem; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-            margin-top: 1rem;
-            transition: 0.2s;
-        }
+        .buy-btn { display: inline-block; padding: 0.7rem 1.5rem; background: var(--text); color: white; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 1rem; transition: 0.2s; }
         .buy-btn:hover { background: var(--accent); }
-     
 
-        /* Categorized Catalog */
+        /* Grid Catalog Styling */
         .catalog-section { margin-bottom: 5rem; }
-        .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem 2rem; }
-        
+        .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem 2.5rem; }
         .catalog-item { text-align: left; }
-        .cover-small { width: 100%; height: auto; margin-bottom: 1.2rem; box-shadow: 3px 3px 12px rgba(0,0,0,0.1); border: 1px solid #eee; transition: 0.3s; }
+        .catalog-item a { text-decoration: none; color: inherit; display: block; }
+        .cover-small { width: 100%; height: auto; max-width: 220px; margin-bottom: 1.2rem; box-shadow: 3px 3px 12px rgba(0,0,0,0.1); border: 1px solid #eee; transition: 0.3s; }
         .catalog-item:hover .cover-small { transform: translateY(-5px); box-shadow: 5px 5px 20px rgba(0,0,0,0.15); }
-        .catalog-item h3 { font-size: 1.2rem; margin: 0.5rem 0; line-height: 1.3; }
+        .catalog-item h3 { font-size: 1.15rem; margin: 0.5rem 0; line-height: 1.3; }
         .catalog-item span { font-size: 0.85rem; color: var(--muted); display: block; }
 
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
             .book-feature { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
-            .book-cover { max-width: 200px; margin: 0 auto; }
+            .book-cover { max-width: 240px; margin: 0 auto; }
             .catalog-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
@@ -103,28 +67,22 @@
     <h1 class="page-title">Books</h1>
 
     <section class="featured-section">
-       
         <span class="section-label">Featured Publications</span>
-     
+        
         <div class="book-feature">
-        <img src="https://m.media-amazon.com/images/I/71ErabKJKmL._SY385_.jpg" alt="The Impeachment Power" class="book-cover">
-       <div class="book-info">
-          
-    <h2>
-        <a href="the-impeachment-power.html" style="text-decoration: none; color: inherit;">
-            The Impeachment Power
-        </a>
-    </h2>
-    <span class="book-tagline">The Law, Politics, and Purpose of an Extraordinary Constitutional Tool</span>
-    <p>An exploration of how the impeachment power has functioned throughout American history, examining the intersection of constitutional law and political necessity.</p>
-    <a href="https://www.amazon.com/Impeachment-Power-Politics-Extraordinary-Constitutional/dp/0691265399/" target="_blank" class="buy-btn">Order Online</a>
-</div>
- </div>
+            <img src="https://m.media-amazon.com/images/I/71ErabKJKmL._SY385_.jpg" alt="The Impeachment Power" class="book-cover">
+            <div class="book-info">
+                <h2><a href="the-impeachment-power.html">The Impeachment Power</a></h2>
+                <span class="book-tagline">The Law, Politics, and Purpose of an Extraordinary Constitutional Tool</span>
+                <p>An exploration of how the impeachment power has functioned throughout American history, examining the intersection of constitutional law and political necessity.</p>
+                <a href="https://www.amazon.com/Impeachment-Power-Politics-Extraordinary-Constitutional/dp/0691265399/" target="_blank" class="buy-btn">Order Online</a>
+            </div>
+        </div>
+
         <div class="book-feature">
             <img src="https://m.media-amazon.com/images/I/51YkeqVfsXL._SY466_.jpg" alt="You Can't Teach That!" class="book-cover">
             <div class="book-info">
-                <h2>  <a href="you-cant-teach-that.html" style="text-decoration: none; color: inherit;">
-            You Can't Teach That!  </a></h2>
+                <h2><a href="you-cant-teach-that.html">You Can't Teach That!</a></h2>
                 <span class="book-tagline">The Battle over University Classrooms</span>
                 <p>A timely analysis of the historical and legal battles over academic freedom and the control of classroom discourse in American higher education.</p>
                 <a href="https://www.amazon.com/You-Cant-Teach-That-University/dp/1509564535/" target="_blank" class="buy-btn">Order Online</a>
@@ -134,10 +92,7 @@
         <div class="book-feature">
             <img src="Speak-Freely-cover.jpg" alt="Speak Freely" class="book-cover">
             <div class="book-info">
-                <h2>
-        <a href="speak-freely.html" style="text-decoration: none; color: inherit;">
-            Speak Freely    </a>
-    </h2>
+                <h2><a href="speak-freely.html">Speak Freely</a></h2>
                 <span class="book-tagline">Why Universities Must Defend Free Speech</span>
                 <p>An urgent defense of the university's mission as a place of free inquiry and open debate, exploring why the protection of controversial speech is essential to the pursuit of truth.</p>
                 <a href="https://www.amazon.com/Speak-Freely-Universities-Defend-Speech/dp/0691191522/" target="_blank" class="buy-btn">Order Online</a>
@@ -145,42 +100,44 @@
         </div>
     </section>
 
-    <hr style="border: 0; border-top: 1px solid var(--border); margin: 4rem 0;">
-
     <section class="catalog-section">
         <span class="section-label">Scholarly Monographs</span>
         <div class="catalog-grid">
             <div class="catalog-item">
-                <a href="repugnant-laws.html" style="text-decoration: none; color: inherit;">
-                 <img src="repugnant-laws.jpg" class="cover-small">
-               <h3>Repugnant Laws</h3>
-                <span>University Press of Kansas</span>
-                </a>  </div>
+                <a href="repugnant-laws.html">
+                    <img src="repugnant-laws.jpg" class="cover-small">
+                    <h3>Repugnant Laws</h3>
+                    <span>University Press of Kansas</span>
+                </a>
+            </div>
             <div class="catalog-item">
-                 <a href="political-foundations.html" style="text-decoration: none; color: inherit;">
-                  <img src="https://m.media-amazon.com/images/I/51rCVX-11aL._SY445_SX342_QL70_ML2_.jpg" class="cover-small">
-                <h3>Political Foundations of Judicial Supremacy</h3>
-                <span>Princeton University Press</span>
-            </a>  </div>
-          
+                <a href="political-foundations.html">
+                    <img src="https://m.media-amazon.com/images/I/51rCVX-11aL._SY445_SX342_QL70_ML2_.jpg" class="cover-small">
+                    <h3>Political Foundations of Judicial Supremacy</h3>
+                    <span>Princeton University Press</span>
+                </a>
+            </div>
             <div class="catalog-item">
-     <a href="constitutional-politics.html" style="text-decoration: none; color: inherit;">
-         <img src="https://m.media-amazon.com/images/I/51YhNQumSlL._SY445_SX342_ML2_.jpg" class="cover-small">
-    <h3>Judicial Review and Constitutional Politics</h3>
-    <span>American Historical Association</span>
- </a> </div>
+                <a href="constitutional-politics.html">
+                    <img src="https://m.media-amazon.com/images/I/51YhNQumSlL._SY445_SX342_ML2_.jpg" class="cover-small">
+                    <h3>Judicial Review and Constitutional Politics</h3>
+                    <span>American Historical Association</span>
+                </a>
+            </div>
             <div class="catalog-item">
-               <a href="constitutional-construction.html" style="text-decoration: none; color: inherit;">
-         <img src="https://m.media-amazon.com/images/I/51z3lLcTq3L._SY466_.jpg" class="cover-small">
-                <h3>Constitutional Construction</h3>
-                <span>Harvard University Press</span>
-            </a>  </div>
+                <a href="constitutional-construction.html">
+                    <img src="https://m.media-amazon.com/images/I/51z3lLcTq3L._SY466_.jpg" class="cover-small">
+                    <h3>Constitutional Construction</h3>
+                    <span>Harvard University Press</span>
+                </a>
+            </div>
             <div class="catalog-item">
-               <a href="constitutional-interpretation.html" style="text-decoration: none; color: inherit;">
-         <img src="https://m.media-amazon.com/images/I/71R99E9HD6L._SY425_.gif" class="cover-small">
-                <h3>Constitutional Interpretation</h3>
-                <span>University Press of Kansas</span>
-           </a>   </div>
+                <a href="constitutional-interpretation.html">
+                    <img src="https://m.media-amazon.com/images/I/71R99E9HD6L._SY425_.gif" class="cover-small">
+                    <h3>Constitutional Interpretation</h3>
+                    <span>University Press of Kansas</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -188,52 +145,59 @@
         <span class="section-label">Textbooks</span>
         <div class="catalog-grid">
             <div class="catalog-item">
-                <a href="GGW.html" style="text-decoration: none; color: inherit;">
+                <a href="GGW.html">
                     <img src="https://m.media-amazon.com/images/I/71YULvWgh3L._SY385_.jpg" class="cover-small">
-                <h3>American Constitutionalism: Vol 1</h3>
-                <span>Oxford University Press</span>
-           </a>   </div>
+                    <h3>American Constitutionalism: Vol 1</h3>
+                    <span>Oxford University Press</span>
+                </a>
+            </div>
             <div class="catalog-item">
-                <a href="GGW.html" style="text-decoration: none; color: inherit;">
-                     <img src="https://m.media-amazon.com/images/I/513zKhDfdBL.jpg" class="cover-small">
-                <h3>American Constitutionalism: Vol 2</h3>
-                <span>Oxford University Press</span>
-            </a>  </div>
+                <a href="GGW.html">
+                    <img src="https://m.media-amazon.com/images/I/513zKhDfdBL.jpg" class="cover-small">
+                    <h3>American Constitutionalism: Vol 2</h3>
+                    <span>Oxford University Press</span>
+                </a>
+            </div>
             <div class="catalog-item">
-                 <a href="APT.html" style="text-decoration: none; color: inherit;">
+                <a href="APT.html">
                     <img src="https://global.oup.com/academic/covers/pop-up/9780199338863" class="cover-small">
-                <h3>American Political Thought</h3>
-                 <span>Oxford University Press</span>
-      </a>    </div>            </div>
-
+                    <h3>American Political Thought</h3>
+                    <span>Oxford University Press</span>
+                </a>
+            </div>
+        </div>
     </section>
 
     <section class="catalog-section">
         <span class="section-label">Edited Volumes</span>
         <div class="catalog-grid">
-        <div class="catalog-item">
-  <a href="https://global.oup.com/academic/product/the-complete-american-constitutionalism-volume-one-9780190237622?cc=us&lang=en&" style="text-decoration: none; color: inherit;">
-            <img src="https://m.media-amazon.com/images/I/413EqXikyBL.jpg" class="cover-small">
-    <h3>The Complete American Constitutionalism, Volume One</h3>
-    <span>Oxford University Press</span>
-</div>
             <div class="catalog-item">
-   <a href="https://www.routledge.com/Law-and-Politics/Whittington/p/book/9780415680356" style="text-decoration: none; color: inherit;">
-                <img src="https://m.media-amazon.com/images/I/21dvIpiL44L.jpg" class="cover-small">
-    <h3>Law and Politics: Critical Concepts in Political Science</h3>
-    <span>Routledge</span>
-</div>
-            <div class="catalog-item">
-               <a href="https://academic.oup.com/edited-volume/28275" style="text-decoration: none; color: inherit;">
-                <img src="https://m.media-amazon.com/images/I/518Xk48lUBL._SY445_SX342_QL70_ML2_.jpg" class="cover-small">
-                <h3>Oxford Handbook of Law and Politics</h3>
-                <span>Oxford University Press</span>
+                <a href="https://global.oup.com/academic/product/the-complete-american-constitutionalism-volume-one-9780190237622" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/413EqXikyBL.jpg" class="cover-small">
+                    <h3>The Complete American Constitutionalism, Volume One</h3>
+                    <span>Oxford University Press</span>
+                </a>
             </div>
             <div class="catalog-item">
-             <a href="https://www.dukeupress.edu/congress-and-the-constitution" style="text-decoration: none; color: inherit;">
-                <img src="https://m.media-amazon.com/images/I/51ifVcQW0rL._SY445_SX342_QL70_ML2_.jpg" class="cover-small">
-                <h3>Congress and the Constitution</h3>
-                <span>Duke University Press</span>
+                <a href="https://www.routledge.com/Law-and-Politics/Whittington/p/book/9780415680356" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/21dvIpiL44L.jpg" class="cover-small">
+                    <h3>Law and Politics: Critical Concepts</h3>
+                    <span>Routledge</span>
+                </a>
+            </div>
+            <div class="catalog-item">
+                <a href="https://academic.oup.com/edited-volume/28275" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/518Xk48lUBL._SY445_SX342_QL70_ML2_.jpg" class="cover-small">
+                    <h3>Oxford Handbook of Law and Politics</h3>
+                    <span>Oxford University Press</span>
+                </a>
+            </div>
+            <div class="catalog-item">
+                <a href="https://www.dukeupress.edu/congress-and-the-constitution" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/51ifVcQW0rL._SY445_SX342_QL70_ML2_.jpg" class="cover-small">
+                    <h3>Congress and the Constitution</h3>
+                    <span>Duke University Press</span>
+                </a>
             </div>
         </div>
     </section>
