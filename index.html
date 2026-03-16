@@ -132,6 +132,41 @@
             .hero-text p { margin: 0 auto 2rem; }
             .grid { grid-template-columns: 1fr; }
         }
+        /* Standardizing the boxes as links */
+.feature-card {
+    text-decoration: none; /* Removes underlines */
+    color: inherit;       /* Keeps your current text color */
+    display: block;       /* Ensures the entire box is a clickable link */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #fdfdfc;
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+}
+
+/* Visual feedback when a user hovers over a box */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-color: var(--accent);
+}
+
+.feature-card h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--text);
+}
+
+.feature-link {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--accent);
+    display: block;
+    margin-top: 1.5rem;
+}
+
     </style>
 </head>
 <body>
