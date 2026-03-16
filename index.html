@@ -198,6 +198,42 @@
         grid-template-columns: 1fr; /* Stacks to 1 column on small screens */
     }
 }
+/* 1. Expand the container to give the grid more room */
+.container { 
+    max-width: 1100px; /* Increased from 1000px */
+    margin: 0 auto; 
+    padding: 4rem 5%; 
+}
+
+/* 2. Optimize the grid and cards */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem; /* Reduced gap slightly to save horizontal space */
+    margin-top: 4rem;
+}
+
+.feature-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f7;
+    border: 1px solid var(--border);
+    padding: 1.5rem; /* Reduced from 2.5rem to stop the 'squeezed' look */
+    transition: all 0.3s ease;
+}
+
+/* 3. Adjust typography for smaller boxes */
+.feature-card h3 {
+    font-size: 1.3rem; /* Slightly smaller header to prevent awkward wrapping */
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
 
 
     </style>
