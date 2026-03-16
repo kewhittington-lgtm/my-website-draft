@@ -26,7 +26,7 @@
         h1, h2, h3, .serif { font-family: 'EB Garamond', serif; }
 
         header {
-            padding: 2rem 5%;
+            padding: 1.5rem 5%;
             border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
@@ -37,25 +37,25 @@
             z-index: 100;
         }
 
-        .logo { font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+        .logo { font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
 
-     nav a { 
-    margin-left: 1.2rem; /* Reduced slightly from 1.5rem to fit more items */
-    text-decoration: none; 
-    color: var(--muted); 
-    font-size: 0.8rem; /* Slightly smaller for a cleaner look */
-    text-transform: uppercase; /* Adds a professional, menu-like feel */
-    letter-spacing: 0.5px;
-    transition: 0.2s; 
-}
+        nav a { 
+            margin-left: 1.2rem;
+            text-decoration: none; 
+            color: var(--muted); 
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: 0.2s; 
+        }
         nav a:hover { color: var(--accent); }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 5%; }
+        .container { max-width: 1150px; margin: 0 auto; padding: 4rem 5%; }
 
         /* Hero Section */
         .hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
         .hero-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
-        .hero-text p { font-size: 1.25rem; color: var(--muted); margin-bottom: 2rem; max-width: 500px; }
+        .hero-text p { font-size: 1.2rem; color: var(--muted); margin-bottom: 2rem; max-width: 550px; }
 
         /* Featured Book Card */
         .featured-book {
@@ -67,7 +67,7 @@
             border-radius: 4px;
         }
         .book-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 1rem; display: block; }
-        .featured-book img { width: 180px; height: auto; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); margin: 1rem 0; }
+        .featured-book img { width: 140px; height: auto; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); margin: 1rem 0; }
         
         .btn {
             display: inline-block;
@@ -75,238 +75,169 @@
             background: var(--text);
             color: white;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 1rem;
             transition: 0.2s;
+            font-weight: 600;
         }
         .btn:hover { background: var(--accent); }
 
-        /* Quick Links / Bento Grid */
-       /* Updated Grid for Visual Balance */
-.grid { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1.5rem; 
-    align-items: stretch; 
-}
+        /* MAIN FEATURES GRID (3-Column) */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
 
-.card { 
-    padding: 2.5rem 2rem; 
-    border: 1px solid var(--border); 
-    transition: 0.3s;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-}
+        .feature-card {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            background: #f9f9f7;
+            border: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            transition: all 0.3s ease;
+        }
 
-.card h3 { 
-    margin-top: 0; 
-    font-size: 1.35rem; 
-    line-height: 1.25;
-    color: var(--text);
-    /* This ensures headers always occupy the same vertical space */
-    min-height: 3.5rem; 
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center; /* Centers shorter titles vertically within the space */
-}
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
 
-.card p { 
-    font-size: 0.95rem; 
-    color: var(--muted); 
-    margin-bottom: 0;
-    flex-grow: 1; /* Pushes the description to fill the space */
-}
+        .feature-card h3 {
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            min-height: 3.2rem; /* Keeps headers aligned across different lengths */
+            display: flex;
+            align-items: flex-start;
+        }
 
-/* Hover effect to signal interactivity */
-.card:hover { 
-    border-color: var(--accent); 
-    background-color: #f9f9f7;
-    transform: translateY(-3px); 
-}
-        @media (max-width: 768px) {
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .feature-link {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* SECONDARY GRID (Academic Resources) */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            padding: 2rem;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .resource-card:hover { 
+            border-color: var(--accent); 
+            background-color: #f9f9f7;
+        }
+
+        .resource-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .resource-card p { font-size: 0.95rem; color: var(--muted); margin: 0; }
+
+        @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; }
             .hero-text p { margin: 0 auto 2rem; }
-            .grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .resource-grid { grid-template-columns: 1fr; }
         }
-        /* Standardizing the boxes as links */
-.feature-card {
-    text-decoration: none; /* Removes underlines */
-    color: inherit;       /* Keeps your current text color */
-    display: block;       /* Ensures the entire box is a clickable link */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background: #fdfdfc;
-    border: 1px solid var(--border);
-    padding: 2.5rem;
-}
-
-/* Visual feedback when a user hovers over a box */
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border-color: var(--accent);
-}
-
-.feature-card h3 {
-    font-family: 'EB Garamond', serif;
-    font-size: 1.5rem;
-    margin-top: 0;
-    color: var(--text);
-}
-
-.feature-link {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    color: var(--accent);
-    display: block;
-    margin-top: 1.5rem;
-}
-/* This is the container that holds the three cards */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Forces 3 equal columns */
-    gap: 2rem;
-    margin-top: 4rem;
-}
-
-/* This ensures the link acts as a layout box */
-.feature-card {
-    text-decoration: none;
-    color: inherit;
-    display: flex; /* Ensures the card content fills the height */
-    flex-direction: column;
-    background: #f9f9f7;
-    border: 1px solid var(--border);
-    padding: 2.5rem;
-    transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-/* Responsive fix: Stack them only on mobile */
-@media (max-width: 850px) {
-    .features-grid {
-        grid-template-columns: 1fr; /* Stacks to 1 column on small screens */
-    }
-}
-/* 1. Expand the container to give the grid more room */
-.container { 
-    max-width: 1100px; /* Increased from 1000px */
-    margin: 0 auto; 
-    padding: 4rem 5%; 
-}
-
-/* 2. Optimize the grid and cards */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1.5rem; /* Reduced gap slightly to save horizontal space */
-    margin-top: 4rem;
-}
-
-.feature-card {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    background: #f9f9f7;
-    border: 1px solid var(--border);
-    padding: 1.5rem; /* Reduced from 2.5rem to stop the 'squeezed' look */
-    transition: all 0.3s ease;
-}
-
-/* 3. Adjust typography for smaller boxes */
-.feature-card h3 {
-    font-size: 1.3rem; /* Slightly smaller header to prevent awkward wrapping */
-    margin-bottom: 1rem;
-}
-
-.feature-card p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-
     </style>
 </head>
 <body>
 
 <header>
-    <a href="#" class="logo">KEITH E. WHITTINGTON</a>
-  <nav>
-    <a href="books.html">Books</a>
-    <a href="research.html">Research</a>
-    <a href="teaching.html">Teaching</a>
-  <a href="databases.html">Databases</a>
-      <a href="commentary.html">Commentary</a>
-    <a href="about.html">About</a>
-</nav>
+    <a href="index.html" class="logo">KEITH E. WHITTINGTON</a>
+    <nav>
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="databases.html">Databases</a>
+        <a href="commentary.html">Commentary</a>
+        <a href="about.html">About</a>
+    </nav>
 </header>
 
 <main class="container">
     <section class="hero">
         <div class="hero-text">
             <h1>David Boies Professor of Law at Yale Law School.</h1>
-            <p>Visiting Fellow at the Hoover Institution. Faculty Director of the Center for Academic Freedom and Free Speech at Yale University. </p>
+            <p>Faculty Director of the Center for Academic Freedom and Free Speech. Scholar of American constitutional history, judicial politics, and the foundations of free inquiry.</p>
             <a href="about.html" class="btn">Read Full Bio</a>
         </div>
         
-       <div class="featured-book">
-    <span class="book-label">Latest Publication</span>
-    <h3 style="font-size: 1.4rem;">The Impeachment Power</h3>
-    <img src="https://m.media-amazon.com/images/I/41QKEBidnML._SY445_SX342_ML2_.jpg" alt="The Impeachment Power" style="width: 140px; height: auto; margin: 20px auto; display: block; box-shadow: 5px 5px 15px rgba(0,0,0,0.1);">
-    <a href="the-impeachment-power.html" class="btn">Learn More</a>
-    <a href="books.html" class="btn" style="background:none; color:var(--text); border:1px solid var(--text)">Explore Books</a>
-</div>
-    
-<section class="features-grid">
-    <a href="research.html" class="feature-card">
-        <h3>American Constitutional History and Law</h3>
-        <p>Exploring the development of constitutional meaning through the interplay of law and politics.</p>
-        <span class="feature-link">Explore Research →</span>
-    </a>
+        <div class="featured-book">
+            <span class="book-label">Latest Publication</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">The Impeachment Power</h3>
+            <img src="https://m.media-amazon.com/images/I/41QKEBidnML._SY445_SX342_ML2_.jpg" alt="The Impeachment Power">
+            <div style="margin-top: 1rem;">
+                <a href="the-impeachment-power.html" class="btn">Learn More</a>
+                <a href="books.html" class="btn" style="background:none; color:var(--text); border:1px solid var(--text)">All Books</a>
+            </div>
+        </div>
+    </section>
 
-    <a href="academic-freedom.html" class="feature-card">
-        <h3>Academic Freedom and Free Inquiry</h3>
-        <p>Advocating for the principles of free speech and intellectual diversity within the university.</p>
-        <span class="feature-link">Learn More →</span>
-    </a>
+    <section class="features-grid">
+        <a href="research.html" class="feature-card">
+            <h3>American Constitutional History and Law</h3>
+            <p>Exploring the development of constitutional meaning through the interplay of law and politics.</p>
+            <span class="feature-link">Explore Research →</span>
+        </a>
 
-    <a href="commentary.html" class="feature-card">
-        <h3>Commentary</h3>
-        <p>Observations on modern constitutional challenges and the state of higher education.</p>
-        <span class="feature-link">Read More →</span>
-    </a>
-</section>
+        <a href="academic-freedom.html" class="feature-card">
+            <h3>Academic Freedom and Free Inquiry</h3>
+            <p>Advocating for the principles of free speech and intellectual diversity within the university.</p>
+            <span class="feature-link">Learn More →</span>
+        </a>
 
+        <a href="commentary.html" class="feature-card">
+            <h3>Commentary</h3>
+            <p>Observations on modern constitutional challenges and the state of higher education.</p>
+            <span class="feature-link">Read More →</span>
+        </a>
+    </section>
 
-
+    <section style="margin-top: 6rem; padding-top: 4rem; border-top: 1px solid var(--border);">
+        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.2rem;">Academic Resources</h2>
+        <div class="resource-grid">
+            <a href="teaching.html" class="resource-card">
+                <h3>Courses & Syllabi</h3>
+                <p>Archive of course descriptions and reading lists from Yale and Princeton.</p>
+            </a>
+            <a href="databases.html" class="resource-card">
+                <h3>Public Databases</h3>
+                <p>Research tools and primary data sets for constitutional and legal history.</p>
+            </a>
+        </div>
+    </section>
 </main>
 
- <section style="margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--border);">
-    <h2 style="text-align: center; margin-bottom: 2.5rem; font-family: 'EB Garamond', serif;">Academic Resources</h2>
-    <div class="grid" style="grid-template-columns: 1fr 1fr;">
-        <a href="teaching.html" class="card" style="text-align: center;">
-            <h3>Courses & Syllabi</h3>
-            <p>Archive of course descriptions and reading lists from Yale and Princeton.</p>
-        </a>
-        <a href="databases.html" class="card" style="text-align: center;">
-            <h3>Public Databases</h3>
-            <p>Research tools and primary data sets for constitutional and legal history.</p>
-        </a>
-    </div>
-</section>
 <footer class="container" style="border-top: 1px solid var(--border); margin-top: 4rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
-    &copy; 2026 Keith E. Whittington. Built with precision for the modern web.
+    &copy; 2026 Keith E. Whittington.
 </footer>
 
 </body>
