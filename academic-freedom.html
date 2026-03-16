@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Freedom & Free Inquiry | Keith E. Whittington</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #fdfdfc; --text: #1a1a1a; --accent: #00356b; --muted: #666; --border: #e5e5e0; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        h1, h2, h3, h4 { font-family: 'EB Garamond', serif; }
+        
+        header { padding: 1.5rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+        nav a { margin-left: 1.2rem; text-decoration: none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 5%; }
+        .page-header { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; margin-bottom: 5rem; align-items: center; }
+        .page-title { font-size: 3rem; margin: 0 0 1.5rem 0; line-height: 1.1; }
+        .intro-text { font-size: 1.15rem; color: #444; }
+        .profile-img { width: 100%; border-radius: 2px; box-shadow: 15px 15px 45px rgba(0,0,0,0.1); border: 1px solid var(--border); }
+
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; display: block; font-weight: 600; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
+        /* Leadership Grid */
+        .leadership-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 5rem; }
+        .card { background: #f9f9f7; padding: 2rem; border: 1px solid var(--border); transition: 0.3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+        .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+        .card h3 { margin-top: 0; font-size: 1.4rem; color: var(--text); }
+        .card p { font-size: 0.9rem; color: var(--muted); flex-grow: 1; }
+        .card-link { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: var(--accent); margin-top: 1.5rem; }
+
+        /* Feature Sections */
+        .feature-block { margin-bottom: 5rem; }
+        .feature-content h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+        .feature-link-group { display: flex; gap: 2rem; margin-top: 1.5rem; }
+        .feature-link-group a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+
+        @media (max-width: 850px) {
+            .page-header { grid-template-columns: 1fr; text-align: center; }
+            .profile-img { max-width: 250px; margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">KEITH E. WHITTINGTON</a>
+    <nav>
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="databases.html">Databases</a>
+        <a href="commentary.html">Commentary</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="page-header">
+        <div class="header-text">
+            <h1 class="page-title">Academic Freedom & Free Inquiry</h1>
+            <p class="intro-text">
+                Dedicated to the preservation of open inquiry, intellectual diversity, and the foundational principles of academic freedom within higher education. Through institutional leadership, campus outreach, and scholarly research, I work to ensure that the university remains a space for the free exchange of ideas.
+            </p>
+        </div>
+        <img src="profile-academic-freedom.jpg" alt="Keith Whittington" class="profile-img">
+    </section>
+
+    <span class="section-label">Institutional Leadership</span>
+    <div class="leadership-grid">
+        <a href="https://academicfreedom.org/" target="_blank" class="card">
+            <h3>Academic Freedom Alliance</h3>
+            <p>Served as the founding chair of the Academic Committee and continue to be active in the leadership of this non-partisan organization dedicated to protecting the rights of faculty members.</p>
+            <span class="card-link">Visit AFA →</span>
+        </a>
+        <a href="https://law.yale.edu/centers-and-workshops/center-academic-freedom-and-free-speech" target="_blank" class="card">
+            <h3>CAFFS at Yale Law</h3>
+            <p>Faculty Director of the Center for Academic Freedom and Free Speech, a hub for research and advocacy regarding the constitutional and institutional protections of expression.</p>
+            <span class="card-link">Explore the Center →</span>
+        </a>
+        <a href="https://www.fire.org/" target="_blank" class="card">
+            <h3>FIRE</h3>
+            <p>Member of the Board of Directors for the Foundation for Individual Rights and Expression, defending fundamental rights on campus and beyond.</p>
+            <span class="card-link">Visit FIRE →</span>
+        </a>
+    </div>
+
+    <section class="feature-block">
+        <span class="section-label">Campus Outreach</span>
+        <div class="feature-content">
+            <h2>Campus Conversations</h2>
+            <p>I have visited dozens of campuses across the country to deliver public lectures, participate in panels, and lead specialized training sessions. These engagements are designed for faculty, students, trustees, and administrative leaders to navigate the complexities of academic freedom and campus free speech in the modern era.</p>
+        </div>
+    </section>
+
+    <section class="feature-block">
+        <span class="section-label">Public Engagement</span>
+        <div class="feature-content">
+            <h2>The Academic Freedom Podcast</h2>
+            <p>Hosting in-depth conversations with scholars, activists, and legal experts on the front lines of free inquiry. We explore the history, philosophy, and current challenges facing intellectual freedom.</p>
+            <div class="feature-link-group">
+                <a href="https://academicfreedom.podbean.com/" target="_blank">Listen on Podbean →</a>
+                <a href="commentary.html">Read Public Commentary →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-block">
+        <span class="section-label">Research</span>
+        <div class="feature-content">
+            <h2>Scholarship on Free Speech</h2>
+            <p>My academic work examines the legal and political foundations of free expression, institutional neutrality, and the mission of the university. This includes recent monographs such as <em>Speak Freely</em> and <em>You Can't Teach That!</em>.</p>
+            <div class="feature-link-group">
+                <a href="research.html">View Research Bucket →</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="container" style="border-top: 1px solid var(--border); margin-top: 6rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
+    &copy; 2026 Keith E. Whittington.
+</footer>
+
+</body>
+</html>
