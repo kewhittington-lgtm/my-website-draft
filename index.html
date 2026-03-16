@@ -166,6 +166,39 @@
     display: block;
     margin-top: 1.5rem;
 }
+/* This is the container that holds the three cards */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Forces 3 equal columns */
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+/* This ensures the link acts as a layout box */
+.feature-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex; /* Ensures the card content fills the height */
+    flex-direction: column;
+    background: #f9f9f7;
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Responsive fix: Stack them only on mobile */
+@media (max-width: 850px) {
+    .features-grid {
+        grid-template-columns: 1fr; /* Stacks to 1 column on small screens */
+    }
+}
+
 
     </style>
 </head>
