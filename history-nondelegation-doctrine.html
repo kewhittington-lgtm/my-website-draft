@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nondelegation Doctrine Database | Keith E. Whittington</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #fdfdfc; --text: #1a1a1a; --accent: #00356b; --muted: #666; --border: #e5e5e0; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        h1, h2, h3, h4 { font-family: 'EB Garamond', serif; }
+        
+        header { padding: 1.5rem 5%; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: white; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; color: var(--text); }
+        nav a { margin-left: 1.2rem; text-decoration: none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 5%; }
+        
+        .breadcrumb { margin-bottom: 3rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        .breadcrumb a { color: var(--muted); text-decoration: none; transition: 0.2s; }
+        .breadcrumb a:hover { color: var(--accent); }
+
+        .db-header h1 { font-size: 3rem; margin: 0 0 1.5rem 0; line-height: 1.1; }
+        .db-intro { font-size: 1.15rem; color: #444; margin-bottom: 3rem; }
+
+        .section-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; display: block; font-weight: 600; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+
+        /* Download Grid */
+        .download-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+        .download-link { 
+            display: flex; align-items: center; gap: 1rem; padding: 1.5rem; 
+            background: white; border: 1px solid var(--border); text-decoration: none; 
+            color: var(--text); font-weight: 600; transition: 0.3s; font-size: 0.95rem;
+        }
+        .download-link:hover { border-color: var(--accent); background: #f9f9f7; }
+        .download-link svg { color: var(--accent); flex-shrink: 0; }
+
+        /* Articles Section */
+        .article-box { background: #f9f9f7; padding: 2.5rem; border: 1px solid var(--border); margin-bottom: 4rem; }
+        .article-box h3 { margin-top: 0; font-size: 1.5rem; }
+        .article-list { list-style: none; padding: 0; }
+        .article-list li { margin-bottom: 1.5rem; }
+        .article-list a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .article-list a:hover { text-decoration: underline; }
+
+        /* Trends Image */
+        .trends-container { margin: 4rem 0; text-align: center; }
+        .trends-img { width: 100%; height: auto; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .caption { display: block; margin-top: 1rem; font-size: 0.85rem; color: var(--muted); font-style: italic; }
+
+        /* Citation Box */
+        .citation-box { background: #fff; border-left: 4px solid var(--accent); padding: 2rem; margin-top: 5rem; border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .citation-box h4 { margin-top: 0; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; color: var(--accent); }
+        .citation-text { font-family: monospace; font-size: 0.9rem; color: #333;
