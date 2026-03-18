@@ -51,4 +51,83 @@
         /* Citation Box */
         .citation-box { background: #fff; border-left: 4px solid var(--accent); padding: 2rem; margin-top: 5rem; border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
         .citation-box h4 { margin-top: 0; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; color: var(--accent); }
-        .citation-text { font-family: monospace; font-size: 0.9rem; color: #333;
+        .citation-text { font-family: monospace; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+        @media (max-width: 768px) {
+            .download-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">KEITH E. WHITTINGTON</a>
+    <nav>
+        <a href="books.html">Books</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="databases.html">Databases</a>
+        <a href="commentary.html">Commentary</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="container">
+    <nav class="breadcrumb">
+        <a href="databases.html">← Back to Databases</a>
+    </nav>
+
+    <div class="db-header">
+        <h1>History of the Nondelegation Doctrine Database</h1>
+        <p class="db-intro">
+            This database provides the comprehensive empirical foundation for the study of the nondelegation doctrine in American courts from 1789 to 2015. Developed in collaboration with <strong>Jason Iuliano</strong>, the dataset tracks over 2,000 cases to provide a granular look at how state and federal courts have treated legislative delegations of power across more than two centuries of legal history.
+        </p>
+    </div>
+
+    <span class="section-title">Data & Documentation</span>
+    <div class="download-grid">
+        <a href="nondelegation_codebook.pdf" class="download-link" target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Legislative Nondelegation Doctrine Codebook (PDF)
+        </a>
+        <a href="nondelegation_data.xlsx" class="download-link" target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Legislative Nondelegation Doctrine Data (Excel)
+        </a>
+    </div>
+
+    <div class="article-box">
+        <h3>Associated Research</h3>
+        <p>The data provided here was utilized in the following articles exploring the historical vitality of the nondelegation doctrine:</p>
+        <ul class="article-list">
+            <li>
+                <a href="https://scholarship.law.upenn.edu/penn_law_review/vol165/iss2/3/" target="_blank">The Myth of the Nondelegation Doctrine</a><br>
+                <small><em>University of Pennsylvania Law Review</em> (2017)</small>
+            </li>
+            <li>
+                <a href="https://scholarship.law.nd.edu/ndlr/vol93/iss2/5/" target="_blank">The Nondelegation Doctrine: Alive and Well</a><br>
+                <small><em>Notre Dame Law Review</em> (2017)</small>
+            </li>
+        </ul>
+    </div>
+
+    <span class="section-title">Trends in Nondelegation</span>
+    <div class="trends-container">
+        <img src="nondelegation-trends.jpg" alt="Trends in Nondelegation Cases" class="trends-img">
+        <span class="caption">Figure: Historical frequency of nondelegation challenges and outcomes in American courts, 1789–2015.</span>
+    </div>
+
+    <div class="citation-box">
+        <h4>Preferred Citation</h4>
+        <div class="citation-text">
+            Jason Iuliano and Keith E. Whittington, Legislative Nondelegation Doctrine Database (2017)
+        </div>
+    </div>
+</main>
+
+<footer class="container" style="border-top: 1px solid var(--border); margin-top: 6rem; padding-top: 2rem; color: var(--muted); font-size: 0.8rem; text-align: center;">
+    &copy; 2026 Keith E. Whittington.
+</footer>
+
+</body>
+</html>
